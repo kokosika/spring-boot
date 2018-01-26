@@ -16,6 +16,5 @@ import javax.persistence.Entity;
 public class Client extends BaseEntity{
 
 
-    //Probando
 
 }
