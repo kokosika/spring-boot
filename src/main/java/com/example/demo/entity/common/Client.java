@@ -7,6 +7,8 @@ package com.example.demo.entity.common;
 
 import com.example.demo.framework.entity.BaseEntity;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -15,6 +17,15 @@ import javax.persistence.Entity;
 @Entity
 public class Client extends BaseEntity{
 
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Person person;
 
+    public Person getPerson() {
+        return person;
+    }
 
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 }

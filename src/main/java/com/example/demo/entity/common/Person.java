@@ -58,6 +58,10 @@ public class Person extends BaseEntity{
     @JsonIgnore
     private Account accounts;
 
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "person")
+    @JsonIgnore
+    private Set<Client> clients;
+
     public Town getTown() {
         return town;
     }
@@ -129,6 +133,20 @@ public class Person extends BaseEntity{
     public void setAccounts(Account accounts) {
         this.accounts = accounts;
     }
-    
-    
+
+    public TypePerson getTypePerson() {
+        return typePerson;
+    }
+
+    public void setTypePerson(TypePerson typePerson) {
+        this.typePerson = typePerson;
+    }
+
+    public Set<Client> getClients() {
+        return clients;
+    }
+
+    public void setClients(Set<Client> clients) {
+        this.clients = clients;
+    }
 }
