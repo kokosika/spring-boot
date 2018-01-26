@@ -5,7 +5,8 @@
  */
 package com.example.demo.framework.entity;
 
-import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -13,6 +14,29 @@ import javax.persistence.MappedSuperclass;
  * @author fcortez
  */
 @MappedSuperclass
-public class BaseDomainEntity implements Serializable{
+public class BaseDomainEntity extends BaseEntity{
+    
+    @Column(length = 50,nullable = false)
+    private String name;
+    @Column(length = 100)
+    private String description;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
+    
     
 }
