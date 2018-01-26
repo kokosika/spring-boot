@@ -6,7 +6,9 @@
 package com.example.demo.entity.common;
 
 import com.example.demo.entity.domain.Province;
+import com.example.demo.entity.domain.StatePerson;
 import com.example.demo.entity.domain.Town;
+import com.example.demo.entity.domain.TypePerson;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Date;
@@ -42,6 +44,14 @@ public class Person extends BaseEntity{
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Town town;
+    
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private StatePerson statePerson;
+    
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private TypePerson typePerson;
     
     
     @OneToOne(cascade = CascadeType.ALL,mappedBy = "person")
@@ -103,4 +113,22 @@ public class Person extends BaseEntity{
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
+
+    public StatePerson getStatePerson() {
+        return statePerson;
+    }
+
+    public void setStatePerson(StatePerson statePerson) {
+        this.statePerson = statePerson;
+    }
+
+    public Account getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(Account accounts) {
+        this.accounts = accounts;
+    }
+    
+    
 }

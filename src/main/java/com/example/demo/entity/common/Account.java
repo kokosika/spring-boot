@@ -6,9 +6,13 @@
 package com.example.demo.entity.common;
 
 import com.example.demo.framework.entity.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -24,6 +28,10 @@ public class Account extends BaseEntity{
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
+    
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
+    @JsonIgnore
+    private Set<AccountAccess> accountAccesses;
 
     public User getUser() {
         return user;
