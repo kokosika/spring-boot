@@ -42,7 +42,4 @@ public class AccountAccess extends BaseDomainEntity{
     public void setAccount(Account account) {
         this.account = account;
     }
-    
-    
-
 }
