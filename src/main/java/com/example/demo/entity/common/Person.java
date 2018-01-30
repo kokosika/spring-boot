@@ -58,7 +58,7 @@ public class Person extends BaseEntity{
     @JsonIgnore
     private Account accounts;
 
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "person")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
     @JsonIgnore
     private Set<Client> clients;
 
