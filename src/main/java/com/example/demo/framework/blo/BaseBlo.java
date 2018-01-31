@@ -43,7 +43,7 @@ public class BaseBlo <T extends BaseEntity,ID extends Serializable> extends Base
     @Override
     public ResponseEntity<ResponseDto> update(T entity) {
         try {
-            entity.setState(new Date());
+            entity.setCreateState(new Date());
             this.baseDao.update(entity);
         } catch (Exception ex) {
             return customException(ex);
@@ -90,5 +90,4 @@ public class BaseBlo <T extends BaseEntity,ID extends Serializable> extends Base
             return customException(ex);
         }
     }
-
 }
