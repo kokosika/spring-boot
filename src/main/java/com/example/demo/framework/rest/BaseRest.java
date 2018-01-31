@@ -36,7 +36,7 @@ public class BaseRest<T,ID extends Serializable>  {
     }
 
     @PutMapping
-    public ResponseEntity<ResponseDto> update(@RequestBody T entity) {
+    public ResponseEntity<ResponseDto> update(@RequestParam Integer id,@RequestBody T entity) {
         return this.baseBlo.update(entity);
     }
 
