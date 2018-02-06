@@ -7,7 +7,6 @@ package com.example.demo.api.domain;
 
 import com.example.demo.blo.interfaces.domain.ITownBlo;
 import com.example.demo.entity.domain.Town;
-import com.example.demo.framework.blo.IBaseBlo;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
