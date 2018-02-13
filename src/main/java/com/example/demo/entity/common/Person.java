@@ -61,6 +61,14 @@ public class Person extends BaseEntity{
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
     @JsonIgnore
     private Set<Client> clients;
+    
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    @JsonIgnore
+    private Set<Provider> providers;
+    
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    @JsonIgnore
+    private Set<Employee> employee;
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
     @JsonIgnore
@@ -157,4 +165,22 @@ public class Person extends BaseEntity{
     public void setClients(Set<Client> clients) {
         this.clients = clients;
     }
+
+    public Set<Provider> getProviders() {
+        return providers;
+    }
+
+    public void setProviders(Set<Provider> providers) {
+        this.providers = providers;
+    }
+
+    public Set<Employee> getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Set<Employee> employee) {
+        this.employee = employee;
+    }
+    
+    
 }

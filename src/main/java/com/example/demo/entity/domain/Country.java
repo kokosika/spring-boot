@@ -18,6 +18,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Country extends BaseDomainEntity{
+
+    /**
+     * @return the regions
+     */
+    public Set<Region> getRegions() {
+        return regions;
+    }
+
+    /**
+     * @param regions the regions to set
+     */
+    public void setRegions(Set<Region> regions) {
+        this.regions = regions;
+    }
     
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "country")
     @JsonIgnore

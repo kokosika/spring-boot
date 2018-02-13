@@ -19,6 +19,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class StatePerson extends BaseDomainEntity{
+
+    /**
+     * @return the persons
+     */
+    public Set<Person> getPersons() {
+        return persons;
+    }
+
+    /**
+     * @param persons the persons to set
+     */
+    public void setPersons(Set<Person> persons) {
+        this.persons = persons;
+    }
     
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "statePerson")
     @JsonIgnore

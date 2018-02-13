@@ -24,6 +24,20 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class User extends BaseEntity{
+
+    /**
+     * @return the accounts
+     */
+    public Account getAccounts() {
+        return accounts;
+    }
+
+    /**
+     * @param accounts the accounts to set
+     */
+    public void setAccounts(Account accounts) {
+        this.accounts = accounts;
+    }
     
     @Column(length = 100,nullable = false,unique = true)
     private String userName;
