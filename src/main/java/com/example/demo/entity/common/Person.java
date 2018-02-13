@@ -61,14 +61,6 @@ public class Person extends BaseEntity{
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
     @JsonIgnore
     private Set<Client> clients;
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
-    @JsonIgnore
-    private Set<Provider> providers;
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
-    @JsonIgnore
-    private Set<Employee> employee;
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
     @JsonIgnore
