@@ -10,28 +10,50 @@ import com.example.demo.entity.domain.Town;
 import com.example.demo.entity.domain.TypeStore;
 import com.example.demo.entity.domain.TypeUser;
 import com.example.demo.framework.entity.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author fcortez
  */
 @Entity
-public class Store extends BaseEntity{
-    
+public class Store extends BaseEntity {
+
+    /**
+     * @return the employeeStores
+     */
+    public Set<EmployeeStore> getEmployeeStores() {
+        return employeeStores;
+    }
+
+    /**
+     * @param employeeStores the employeeStores to set
+     */
+    public void setEmployeeStores(Set<EmployeeStore> employeeStores) {
+        this.employeeStores = employeeStores;
+    }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private TypeStore typeStore;    
-    
+    private TypeStore typeStore;
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private StateStore stateStore;    
-    
+    private StateStore stateStore;
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Town town;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
+    @JsonIgnore
+    private Set<EmployeeStore> employeeStores;
 
     public Town getTown() {
         return town;
@@ -39,7 +61,7 @@ public class Store extends BaseEntity{
 
     public void setTown(Town town) {
         this.town = town;
-    }   
+    }
 
     /**
      * @return the typeStore
@@ -68,5 +90,5 @@ public class Store extends BaseEntity{
     public void setStateStore(StateStore stateStore) {
         this.stateStore = stateStore;
     }
-    
+
 }

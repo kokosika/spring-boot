@@ -7,9 +7,13 @@ package com.example.demo.entity.common;
 
 import com.example.demo.entity.domain.TypeEmployee;
 import com.example.demo.framework.entity.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -17,6 +21,20 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Employee extends BaseEntity{
+
+    /**
+     * @return the employeeStores
+     */
+    public Set<EmployeeStore> getEmployeeStores() {
+        return employeeStores;
+    }
+
+    /**
+     * @param employeeStores the employeeStores to set
+     */
+    public void setEmployeeStores(Set<EmployeeStore> employeeStores) {
+        this.employeeStores = employeeStores;
+    }
 
     /**
      * @return the typeEmployee
@@ -39,6 +57,10 @@ public class Employee extends BaseEntity{
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeEmployee typeEmployee;
+    
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "employee")
+    @JsonIgnore
+    private Set<EmployeeStore> employeeStores;
 
     public Person getPerson() {
         return person;
