@@ -5,6 +5,7 @@
  */
 package com.example.demo.entity.common;
 
+import com.example.demo.entity.domain.TypeClient;
 import com.example.demo.framework.entity.BaseEntity;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -19,7 +20,10 @@ public class Client extends BaseEntity{
 
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private Person person;
+    private Person person;    
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private TypeClient typeClient;
 
     public Person getPerson() {
         return person;
@@ -28,4 +32,14 @@ public class Client extends BaseEntity{
     public void setPerson(Person person) {
         this.person = person;
     }
+
+    public TypeClient getTypeClient() {
+        return typeClient;
+    }
+
+    public void setTypeClient(TypeClient typeClient) {
+        this.typeClient = typeClient;
+    }
+    
+    
 }

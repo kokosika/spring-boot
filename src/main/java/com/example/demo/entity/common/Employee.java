@@ -5,7 +5,6 @@
  */
 package com.example.demo.entity.common;
 
-import com.example.demo.entity.domain.Town;
 import com.example.demo.entity.domain.TypeEmployee;
 import com.example.demo.framework.entity.BaseEntity;
 import javax.persistence.Entity;
@@ -42,7 +41,4 @@ public class Employee extends BaseEntity{
     public void setEmployee(TypeEmployee typeEmployee) {
         this.typeEmployee = typeEmployee;
     }
-    
-    
-    
 }
