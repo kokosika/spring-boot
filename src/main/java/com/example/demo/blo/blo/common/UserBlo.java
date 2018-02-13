@@ -4,11 +4,10 @@ import com.example.demo.blo.interfaces.common.IUserBlo;
 import com.example.demo.dao.interfaces.common.IUserDao;
 import com.example.demo.entity.common.User;
 import com.example.demo.framework.blo.BaseBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserBlo extends BaseBlo<User,Integer> implements IUserBlo {
+public class UserBlo extends BaseBlo<User, Integer> implements IUserBlo {
 
     private final IUserDao userDao;
 
@@ -19,6 +18,6 @@ public class UserBlo extends BaseBlo<User,Integer> implements IUserBlo {
      */
     public UserBlo(IUserDao userDao) {
         super(userDao);
-        this.userDao=userDao;
+        this.userDao = userDao;
     }
 }

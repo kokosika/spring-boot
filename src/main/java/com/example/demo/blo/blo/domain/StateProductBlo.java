@@ -12,14 +12,13 @@ import com.example.demo.framework.blo.BaseDomainBlo;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class StateProductBlo extends BaseDomainBlo<StateProduct, Integer> implements IStateProductBlo{
-    
+public class StateProductBlo extends BaseDomainBlo<StateProduct, Integer> implements IStateProductBlo {
+
     private final IStateProductDao stateProductDao;
-    
+
     /**
      * Inject dao
      *
@@ -29,5 +28,5 @@ public class StateProductBlo extends BaseDomainBlo<StateProduct, Integer> implem
         super(stateProductDao);
         this.stateProductDao = stateProductDao;
     }
-    
+
 }

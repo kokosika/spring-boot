@@ -1,17 +1,13 @@
 package com.example.demo.blo.blo.common;
 
-import com.example.demo.blo.interfaces.common.IAccountAccessBlo;
 import com.example.demo.blo.interfaces.common.IEmployeeStoreBlo;
-import com.example.demo.dao.interfaces.common.IAccounAccessDao;
 import com.example.demo.dao.interfaces.common.IEmployeeStoreDao;
-import com.example.demo.entity.common.AccountAccess;
 import com.example.demo.entity.common.EmployeeStore;
 import com.example.demo.framework.blo.BaseBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeeStoreBlo extends BaseBlo<EmployeeStore,Integer> implements IEmployeeStoreBlo {
+public class EmployeeStoreBlo extends BaseBlo<EmployeeStore, Integer> implements IEmployeeStoreBlo {
 
     private final IEmployeeStoreDao employeeStoreDao;
 
@@ -22,6 +18,6 @@ public class EmployeeStoreBlo extends BaseBlo<EmployeeStore,Integer> implements 
      */
     public EmployeeStoreBlo(IEmployeeStoreDao employeeStoreDao) {
         super(employeeStoreDao);
-        this.employeeStoreDao= employeeStoreDao;
+        this.employeeStoreDao = employeeStoreDao;
     }
 }

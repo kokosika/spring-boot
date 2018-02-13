@@ -5,26 +5,20 @@
  */
 package com.example.demo.framework.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 /**
- *
  * @author fcortez
  */
 @MappedSuperclass
-public class BaseEntity implements Serializable{
-    
+public class BaseEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    
+
     @Temporal(TemporalType.DATE)
     private Date state;
     @Temporal(TemporalType.DATE)
@@ -53,7 +47,6 @@ public class BaseEntity implements Serializable{
     public void setCreateState(Date createState) {
         this.createState = createState;
     }
-    
-    
-    
+
+
 }

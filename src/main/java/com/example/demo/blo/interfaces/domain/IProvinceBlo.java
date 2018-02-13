@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Province;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface IProvinceBlo extends IBaseBlo<Province, Integer>{
-    
+public interface IProvinceBlo extends IBaseBlo<Province, Integer> {
+
 }

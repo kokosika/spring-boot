@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.TypeEmployee;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface ITypeEmployeeBlo extends IBaseBlo<TypeEmployee, Integer>{
-    
+public interface ITypeEmployeeBlo extends IBaseBlo<TypeEmployee, Integer> {
+
 }

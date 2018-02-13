@@ -9,9 +9,8 @@ import com.example.demo.entity.common.Product;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface IProductDao extends IBaseDao<Product, Integer>{
-    
+public interface IProductDao extends IBaseDao<Product, Integer> {
+
 }

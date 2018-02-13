@@ -4,11 +4,10 @@ import com.example.demo.blo.interfaces.domain.ICountryBlo;
 import com.example.demo.dao.interfaces.domain.ICountryDao;
 import com.example.demo.entity.domain.Country;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CountryBlo extends BaseDomainBlo<Country,Integer> implements ICountryBlo {
+public class CountryBlo extends BaseDomainBlo<Country, Integer> implements ICountryBlo {
     private final ICountryDao countryDao;
 
     /**

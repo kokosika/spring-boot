@@ -12,13 +12,13 @@ import com.example.demo.framework.blo.BaseDomainBlo;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class ProvinceBlo extends BaseDomainBlo<Province, Integer> implements IProvinceBlo{
+public class ProvinceBlo extends BaseDomainBlo<Province, Integer> implements IProvinceBlo {
 
     private final IProvinceDao provinceDao;
+
     /**
      * @param provinceDao
      */
@@ -26,5 +26,5 @@ public class ProvinceBlo extends BaseDomainBlo<Province, Integer> implements IPr
         super(provinceDao);
         this.provinceDao = provinceDao;
     }
-    
+
 }

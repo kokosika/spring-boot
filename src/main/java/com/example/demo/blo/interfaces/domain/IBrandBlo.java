@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Brand;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface IBrandBlo extends IBaseBlo<Brand, Integer>{
-    
+public interface IBrandBlo extends IBaseBlo<Brand, Integer> {
+
 }

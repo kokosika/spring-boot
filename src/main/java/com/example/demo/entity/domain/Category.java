@@ -5,21 +5,20 @@
  */
 package com.example.demo.entity.domain;
 
-import com.example.demo.entity.common.Client;
 import com.example.demo.entity.common.Product;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class Category extends BaseDomainEntity{
+public class Category extends BaseDomainEntity {
 
     /**
      * @return the products
@@ -34,9 +33,9 @@ public class Category extends BaseDomainEntity{
     public void setProducts(Set<Product> products) {
         this.products = products;
     }
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "category")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     @JsonIgnore
     private Set<Product> products;
-    
+
 }

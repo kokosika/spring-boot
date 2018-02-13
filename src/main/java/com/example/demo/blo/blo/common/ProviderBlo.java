@@ -9,18 +9,16 @@ import com.example.demo.blo.interfaces.common.IProviderBlo;
 import com.example.demo.dao.interfaces.common.IProviderDao;
 import com.example.demo.entity.common.Provider;
 import com.example.demo.framework.blo.BaseBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class ProviderBlo extends BaseBlo<Provider, Integer> implements IProviderBlo{
-    
+public class ProviderBlo extends BaseBlo<Provider, Integer> implements IProviderBlo {
+
     private final IProviderDao providerDao;
-    
+
     /**
      * Inject dao
      *
@@ -30,5 +28,5 @@ public class ProviderBlo extends BaseBlo<Provider, Integer> implements IProvider
         super(providerDao);
         this.providerDao = providerDao;
     }
-    
+
 }

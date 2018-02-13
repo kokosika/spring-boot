@@ -5,25 +5,20 @@
  */
 package com.example.demo.blo.blo.domain;
 
-import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.blo.interfaces.domain.ITypeStoreBlo;
-import com.example.demo.dao.interfaces.domain.IBrandDao;
 import com.example.demo.dao.interfaces.domain.ITypeStoreDao;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeStore;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class TypeStoreBlo extends BaseDomainBlo<TypeStore, Integer> implements ITypeStoreBlo{
-    
+public class TypeStoreBlo extends BaseDomainBlo<TypeStore, Integer> implements ITypeStoreBlo {
+
     private final ITypeStoreDao typeStoreDao;
-    
+
     /**
      * Inject dao
      *
@@ -33,5 +28,5 @@ public class TypeStoreBlo extends BaseDomainBlo<TypeStore, Integer> implements I
         super(typeStoreDao);
         this.typeStoreDao = typeStoreDao;
     }
-    
+
 }

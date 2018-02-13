@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.io.Serializable;
 
-public interface IBaseBlo <T,ID extends Serializable> {
+public interface IBaseBlo<T, ID extends Serializable> {
     /**
      * @param entity
      * @return
@@ -28,10 +28,10 @@ public interface IBaseBlo <T,ID extends Serializable> {
      * @param id
      * @return
      */
-    ResponseEntity<ResponseDto> findByKey(ID id) ;
+    ResponseEntity<ResponseDto> findByKey(ID id);
 
     /**
      * @return
      */
-    ResponseEntity<ResponseDto> findAll() ;
+    ResponseEntity<ResponseDto> findAll();
 }

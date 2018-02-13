@@ -9,25 +9,22 @@ import com.example.demo.blo.interfaces.domain.ITownBlo;
 import com.example.demo.dao.interfaces.domain.ITownDao;
 import com.example.demo.entity.domain.Town;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class TownBlo extends BaseDomainBlo<Town, Integer> implements ITownBlo{
-    
+public class TownBlo extends BaseDomainBlo<Town, Integer> implements ITownBlo {
+
     private final ITownDao townDao;
-    
+
     /**
-     * 
-     * @param townDao 
+     * @param townDao
      */
     public TownBlo(ITownDao townDao) {
         super(townDao);
         this.townDao = townDao;
     }
-    
+
 }

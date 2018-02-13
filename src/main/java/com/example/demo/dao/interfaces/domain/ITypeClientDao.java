@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.TypeClient;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface ITypeClientDao extends IBaseDao<TypeClient, Integer>{
-    
+public interface ITypeClientDao extends IBaseDao<TypeClient, Integer> {
+
 }

@@ -7,21 +7,19 @@ package com.example.demo.api.common;
 
 import com.example.demo.blo.interfaces.common.IEmployeeBlo;
 import com.example.demo.entity.common.Employee;
-import com.example.demo.framework.blo.IBaseBlo;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
 @RequestMapping(value = "api/employee")
-public class EmployeeRest extends BaseRest<Employee, Integer>{
-    
+public class EmployeeRest extends BaseRest<Employee, Integer> {
+
     private final IEmployeeBlo employeeBlo;
-    
+
     /**
      * Inject blo
      *
@@ -31,5 +29,5 @@ public class EmployeeRest extends BaseRest<Employee, Integer>{
         super(employeeBlo);
         this.employeeBlo = employeeBlo;
     }
-    
+
 }

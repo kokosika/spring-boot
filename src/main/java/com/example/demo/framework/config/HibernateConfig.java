@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean;
 
 /**
- *
  * @author fecalderon
  */
 @Configuration

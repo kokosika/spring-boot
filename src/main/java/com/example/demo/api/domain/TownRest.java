@@ -12,22 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
 @RequestMapping(value = "/api/town")
-public class TownRest extends BaseRest<Town, Integer>{
-    
+public class TownRest extends BaseRest<Town, Integer> {
+
     private final ITownBlo townBlo;
-    
+
     /**
-     * 
-     * @param townBlo 
+     * @param townBlo
      */
     public TownRest(ITownBlo townBlo) {
         super(townBlo);
         this.townBlo = townBlo;
     }
-    
+
 }

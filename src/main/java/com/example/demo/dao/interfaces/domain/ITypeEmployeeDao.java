@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.TypeEmployee;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface ITypeEmployeeDao extends IBaseDao<TypeEmployee, Integer>{
-    
+public interface ITypeEmployeeDao extends IBaseDao<TypeEmployee, Integer> {
+
 }

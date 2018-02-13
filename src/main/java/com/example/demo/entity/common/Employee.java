@@ -8,19 +8,15 @@ package com.example.demo.entity.common;
 import com.example.demo.entity.domain.TypeEmployee;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class Employee extends BaseEntity{
+public class Employee extends BaseEntity {
 
     /**
      * @return the employeeStores
@@ -49,22 +45,22 @@ public class Employee extends BaseEntity{
     public void setTypeEmployee(TypeEmployee typeEmployee) {
         this.typeEmployee = typeEmployee;
     }
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeEmployee typeEmployee;
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "employee")
-    @JsonIgnore
-    private Set<EmployeeStore> employeeStores;
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
     @JsonIgnore
-    private Set<Operation> operations ;
+    private Set<EmployeeStore> employeeStores;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
+    @JsonIgnore
+    private Set<Operation> operations;
 
     public Person getPerson() {
         return person;

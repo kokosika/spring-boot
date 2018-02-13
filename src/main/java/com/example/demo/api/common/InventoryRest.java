@@ -1,17 +1,14 @@
 package com.example.demo.api.common;
 
-import com.example.demo.blo.interfaces.common.IAccountAccessBlo;
 import com.example.demo.blo.interfaces.common.IInventoryBlo;
-import com.example.demo.entity.common.AccountAccess;
 import com.example.demo.entity.common.Inventory;
-import com.example.demo.framework.blo.IBaseBlo;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "api/inventory")
-public class InventoryRest extends BaseRest<Inventory,Integer> {
+public class InventoryRest extends BaseRest<Inventory, Integer> {
 
     private final IInventoryBlo inventoryBlo;
 

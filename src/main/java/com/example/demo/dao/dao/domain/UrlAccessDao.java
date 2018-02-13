@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class UrlAccessDao extends BaseDao<UrlAccess,Integer> implements IUrlAccessDao {
+public class UrlAccessDao extends BaseDao<UrlAccess, Integer> implements IUrlAccessDao {
 
 
     /**

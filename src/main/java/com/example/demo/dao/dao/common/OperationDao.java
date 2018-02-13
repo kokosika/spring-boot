@@ -1,8 +1,6 @@
 package com.example.demo.dao.dao.common;
 
-import com.example.demo.dao.interfaces.common.IAccounAccessDao;
 import com.example.demo.dao.interfaces.common.IOperationDao;
-import com.example.demo.entity.common.AccountAccess;
 import com.example.demo.entity.common.Operation;
 import com.example.demo.framework.dao.BaseDao;
 import org.hibernate.SessionFactory;
@@ -13,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class OperationDao extends BaseDao<Operation,Integer> implements IOperationDao{
+public class OperationDao extends BaseDao<Operation, Integer> implements IOperationDao {
     /**
      * Create the new instance for session factory injection
      *

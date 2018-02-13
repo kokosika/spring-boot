@@ -7,20 +7,16 @@ package com.example.demo.entity.common;
 
 import com.example.demo.entity.domain.TypeJob;
 import com.example.demo.framework.entity.BaseEntity;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
-import javax.persistence.CascadeType;
+
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class EmployeeStore extends BaseEntity{
+public class EmployeeStore extends BaseEntity {
 
     /**
      * @return the employee
@@ -63,17 +59,17 @@ public class EmployeeStore extends BaseEntity{
     public void setTypeJob(TypeJob typeJob) {
         this.typeJob = typeJob;
     }
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Employee employee;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Store store;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeJob typeJob;
-    
+
 }

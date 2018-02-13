@@ -8,21 +8,19 @@ package com.example.demo.dao.dao.domain;
 import com.example.demo.dao.interfaces.domain.ITownDao;
 import com.example.demo.entity.domain.Town;
 import com.example.demo.framework.dao.BaseDao;
-import java.io.Serializable;
 import org.hibernate.SessionFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
  * @author fcortez
  */
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class TownDao extends BaseDao<Town, Integer> implements ITownDao{
-    
+public class TownDao extends BaseDao<Town, Integer> implements ITownDao {
+
     /**
      * Create the new instance for session factory injection
      *
@@ -31,5 +29,5 @@ public class TownDao extends BaseDao<Town, Integer> implements ITownDao{
     public TownDao(SessionFactory sessionFactory) {
         super(sessionFactory);
     }
-    
+
 }

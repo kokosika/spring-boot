@@ -14,21 +14,20 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
  * @author fcortez
  */
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class EmployeeDao extends BaseDao<Employee, Integer> implements IEmployeeDao{
-    
+public class EmployeeDao extends BaseDao<Employee, Integer> implements IEmployeeDao {
+
     /**
      * Create the new instance for session factory injection
      *
      * @param sessionFactory session factory hibernate interface
-     */    
+     */
     public EmployeeDao(SessionFactory sessionFactory) {
         super(sessionFactory);
     }
-    
+
 }

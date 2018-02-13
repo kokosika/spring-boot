@@ -9,18 +9,16 @@ import com.example.demo.blo.interfaces.domain.ITypeEmployeeBlo;
 import com.example.demo.dao.interfaces.domain.ITypeEmployeeDao;
 import com.example.demo.entity.domain.TypeEmployee;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class TypeEmployeeBlo extends BaseDomainBlo<TypeEmployee, Integer> implements ITypeEmployeeBlo{
-    
+public class TypeEmployeeBlo extends BaseDomainBlo<TypeEmployee, Integer> implements ITypeEmployeeBlo {
+
     private final ITypeEmployeeDao typeEmployeeDao;
-    
+
     /**
      * Inject dao
      *
@@ -30,5 +28,5 @@ public class TypeEmployeeBlo extends BaseDomainBlo<TypeEmployee, Integer> implem
         super(typeEmployeeDao);
         this.typeEmployeeDao = typeEmployeeDao;
     }
-    
+
 }

@@ -5,14 +5,12 @@
  */
 package com.example.demo.blo.interfaces.domain;
 
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.StateStore;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface IStateStoreBlo extends IBaseBlo<StateStore, Integer>{
-    
+public interface IStateStoreBlo extends IBaseBlo<StateStore, Integer> {
+
 }

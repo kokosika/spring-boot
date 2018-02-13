@@ -5,14 +5,12 @@
  */
 package com.example.demo.blo.interfaces.domain;
 
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeClient;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface ITypeClientBlo extends IBaseBlo<TypeClient, Integer>{
-    
+public interface ITypeClientBlo extends IBaseBlo<TypeClient, Integer> {
+
 }

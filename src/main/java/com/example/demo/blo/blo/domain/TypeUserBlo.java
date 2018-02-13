@@ -4,7 +4,6 @@ import com.example.demo.blo.interfaces.domain.ITypeUserBlo;
 import com.example.demo.dao.interfaces.domain.ITypeUserDao;
 import com.example.demo.entity.domain.TypeUser;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Town;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
 public interface ITownBlo extends IBaseBlo<Town, Integer> {
-    
+
 }

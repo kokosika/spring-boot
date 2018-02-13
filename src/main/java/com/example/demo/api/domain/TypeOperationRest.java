@@ -5,24 +5,21 @@
  */
 package com.example.demo.api.domain;
 
-import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.blo.interfaces.domain.ITypeOperationBlo;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeOperation;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
-@RequestMapping(value="api/type-operation")
-public class TypeOperationRest extends BaseRest<TypeOperation, Integer>{
-    
+@RequestMapping(value = "api/type-operation")
+public class TypeOperationRest extends BaseRest<TypeOperation, Integer> {
+
     private final ITypeOperationBlo typeOperationBlo;
-    
+
     /**
      * Inject blo
      *
@@ -33,5 +30,5 @@ public class TypeOperationRest extends BaseRest<TypeOperation, Integer>{
         this.typeOperationBlo = typeOperationBlo;
     }
 
-    
+
 }

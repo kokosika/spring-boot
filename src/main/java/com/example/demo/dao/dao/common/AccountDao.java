@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class AccountDao extends BaseDao<Account,Integer> implements IAccountDao {
+public class AccountDao extends BaseDao<Account, Integer> implements IAccountDao {
 
 
     /**

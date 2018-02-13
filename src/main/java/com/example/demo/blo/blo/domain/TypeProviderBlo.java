@@ -12,14 +12,13 @@ import com.example.demo.framework.blo.BaseDomainBlo;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class TypeProviderBlo extends BaseDomainBlo<TypeProvider, Integer> implements ITypeProviderBlo{
-    
+public class TypeProviderBlo extends BaseDomainBlo<TypeProvider, Integer> implements ITypeProviderBlo {
+
     private final ITypeProviderDao typeProviderDao;
-    
+
     /**
      * Inject dao
      *
@@ -29,5 +28,5 @@ public class TypeProviderBlo extends BaseDomainBlo<TypeProvider, Integer> implem
         super(typeProviderDao);
         this.typeProviderDao = typeProviderDao;
     }
-    
+
 }

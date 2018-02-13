@@ -7,17 +7,17 @@ package com.example.demo.entity.domain;
 
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class Country extends BaseDomainEntity{
+public class Country extends BaseDomainEntity {
 
     /**
      * @return the regions
@@ -32,8 +32,8 @@ public class Country extends BaseDomainEntity{
     public void setRegions(Set<Region> regions) {
         this.regions = regions;
     }
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "country")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
     @JsonIgnore
     private Set<Region> regions;
 }

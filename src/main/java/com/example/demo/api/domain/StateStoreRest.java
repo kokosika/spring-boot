@@ -5,24 +5,21 @@
  */
 package com.example.demo.api.domain;
 
-import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.blo.interfaces.domain.IStateStoreBlo;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.StateStore;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
-@RequestMapping(value="api/state-store")
-public class StateStoreRest extends BaseRest<StateStore, Integer>{
-    
+@RequestMapping(value = "api/state-store")
+public class StateStoreRest extends BaseRest<StateStore, Integer> {
+
     private final IStateStoreBlo stateStoreBlo;
-    
+
     /**
      * Inject blo
      *
@@ -33,5 +30,5 @@ public class StateStoreRest extends BaseRest<StateStore, Integer>{
         this.stateStoreBlo = stateStoreBlo;
     }
 
-    
+
 }

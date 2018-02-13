@@ -9,18 +9,16 @@ import com.example.demo.blo.interfaces.domain.ICategoryBlo;
 import com.example.demo.dao.interfaces.domain.ICategoryDao;
 import com.example.demo.entity.domain.Category;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
 public class CategoryBlo extends BaseDomainBlo<Category, Integer> implements ICategoryBlo {
-    
+
     private final ICategoryDao categoryDao;
-    
+
     /**
      * Inject dao
      *
@@ -30,5 +28,5 @@ public class CategoryBlo extends BaseDomainBlo<Category, Integer> implements ICa
         super(categoryDao);
         this.categoryDao = categoryDao;
     }
-    
+
 }

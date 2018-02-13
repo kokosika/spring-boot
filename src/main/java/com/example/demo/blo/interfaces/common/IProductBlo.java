@@ -9,9 +9,8 @@ import com.example.demo.entity.common.Product;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface IProductBlo extends IBaseBlo<Product, Integer>{
-    
+public interface IProductBlo extends IBaseBlo<Product, Integer> {
+
 }

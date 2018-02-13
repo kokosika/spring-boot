@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Category;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface ICategoryBlo extends IBaseBlo<Category, Integer>{
-    
+public interface ICategoryBlo extends IBaseBlo<Category, Integer> {
+
 }

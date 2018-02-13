@@ -14,15 +14,14 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
  * @author fcortez
  */
 
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class TypeProviderDao extends BaseDao<TypeProvider, Integer> implements ITypeProviderDao{
-    
+public class TypeProviderDao extends BaseDao<TypeProvider, Integer> implements ITypeProviderDao {
+
     /**
      * Create the new instance for session factory injection
      *
@@ -31,5 +30,5 @@ public class TypeProviderDao extends BaseDao<TypeProvider, Integer> implements I
     public TypeProviderDao(SessionFactory sessionFactory) {
         super(sessionFactory);
     }
-    
+
 }

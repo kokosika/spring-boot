@@ -6,7 +6,6 @@
 package com.example.demo.framework.config;
 
 /**
- *
  * @author fecalderon
  */
 
@@ -25,7 +24,7 @@ public class CorsConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                .allowedMethods("PUT","POST","DELETE","GET");
+                        .allowedMethods("PUT", "POST", "DELETE", "GET");
             }
         };
     }

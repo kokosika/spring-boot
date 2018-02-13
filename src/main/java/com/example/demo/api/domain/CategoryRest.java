@@ -6,23 +6,21 @@
 package com.example.demo.api.domain;
 
 /**
- *
  * @author fcortez
  */
 
 import com.example.demo.blo.interfaces.domain.ICategoryBlo;
 import com.example.demo.entity.domain.Category;
-import com.example.demo.framework.blo.IBaseBlo;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "api/category")
-public class CategoryRest  extends BaseRest<Category,Integer>{
-    
+public class CategoryRest extends BaseRest<Category, Integer> {
+
     private final ICategoryBlo categoryBlo;
-    
+
     /**
      * Inject blo
      *
@@ -32,5 +30,5 @@ public class CategoryRest  extends BaseRest<Category,Integer>{
         super(categoryBlo);
         this.categoryBlo = categoryBlo;
     }
-    
+
 }

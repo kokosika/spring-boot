@@ -9,9 +9,8 @@ import com.example.demo.entity.common.Provider;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface IProviderDao extends IBaseDao<Provider, Integer>{
-    
+public interface IProviderDao extends IBaseDao<Provider, Integer> {
+
 }

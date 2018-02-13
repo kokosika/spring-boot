@@ -12,22 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
 @RequestMapping(value = "/api/province")
-public class ProvinceRest extends BaseRest<Province, Integer>{
-   
+public class ProvinceRest extends BaseRest<Province, Integer> {
+
     private final IProvinceBlo provinceBlo;
-    
+
     /**
-    * 
-    * @param provinceBlo 
-    */
+     * @param provinceBlo
+     */
     public ProvinceRest(IProvinceBlo provinceBlo) {
         super(provinceBlo);
         this.provinceBlo = provinceBlo;
     }
-    
+
 }

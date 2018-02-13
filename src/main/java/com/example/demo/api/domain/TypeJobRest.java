@@ -5,24 +5,21 @@
  */
 package com.example.demo.api.domain;
 
-import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.blo.interfaces.domain.ITypeJobBlo;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeJob;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
-@RequestMapping(value="api/type-job")
-public class TypeJobRest extends BaseRest<TypeJob, Integer>{
-    
+@RequestMapping(value = "api/type-job")
+public class TypeJobRest extends BaseRest<TypeJob, Integer> {
+
     private final ITypeJobBlo typeJobBlo;
-    
+
     /**
      * Inject blo
      *
@@ -33,5 +30,5 @@ public class TypeJobRest extends BaseRest<TypeJob, Integer>{
         this.typeJobBlo = typeJobBlo;
     }
 
-    
+
 }

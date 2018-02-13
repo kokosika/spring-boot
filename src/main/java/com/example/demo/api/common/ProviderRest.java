@@ -7,22 +7,20 @@ package com.example.demo.api.common;
 
 import com.example.demo.blo.interfaces.common.IProviderBlo;
 import com.example.demo.entity.common.Provider;
-import com.example.demo.framework.blo.IBaseBlo;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
 @RequestMapping(value = "api/provider")
-public class ProviderRest extends BaseRest<Provider, Integer>{
-    
+public class ProviderRest extends BaseRest<Provider, Integer> {
+
     private final IProviderBlo providerBlo;
-    
-     /**
+
+    /**
      * Inject blo
      *
      * @param providerBlo interfaz blo
@@ -31,5 +29,5 @@ public class ProviderRest extends BaseRest<Provider, Integer>{
         super(providerBlo);
         this.providerBlo = providerBlo;
     }
-    
+
 }

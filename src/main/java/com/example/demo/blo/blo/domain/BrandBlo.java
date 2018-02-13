@@ -9,18 +9,16 @@ import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.dao.interfaces.domain.IBrandDao;
 import com.example.demo.entity.domain.Brand;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author fcortez
  */
 @Service
-public class BrandBlo extends BaseDomainBlo<Brand, Integer> implements IBrandBlo{
-    
+public class BrandBlo extends BaseDomainBlo<Brand, Integer> implements IBrandBlo {
+
     private final IBrandDao brandDao;
-    
+
     /**
      * Inject dao
      *
@@ -30,5 +28,5 @@ public class BrandBlo extends BaseDomainBlo<Brand, Integer> implements IBrandBlo
         super(brandDao);
         this.brandDao = brandDao;
     }
-    
+
 }

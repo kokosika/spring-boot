@@ -5,9 +5,7 @@
  */
 package com.example.demo.dao.dao.domain;
 
-import com.example.demo.dao.interfaces.domain.IBrandDao;
 import com.example.demo.dao.interfaces.domain.ITypeOperationDao;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeOperation;
 import com.example.demo.framework.dao.BaseDao;
 import org.hibernate.SessionFactory;
@@ -16,15 +14,14 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
  * @author fcortez
  */
 
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class TypeOperationDao extends BaseDao<TypeOperation, Integer> implements ITypeOperationDao{
-    
+public class TypeOperationDao extends BaseDao<TypeOperation, Integer> implements ITypeOperationDao {
+
     /**
      * Create the new instance for session factory injection
      *
@@ -33,5 +30,5 @@ public class TypeOperationDao extends BaseDao<TypeOperation, Integer> implements
     public TypeOperationDao(SessionFactory sessionFactory) {
         super(sessionFactory);
     }
-    
+
 }

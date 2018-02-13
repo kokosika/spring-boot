@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class CountryDao extends BaseDao<Country,Integer> implements ICountryDao {
+public class CountryDao extends BaseDao<Country, Integer> implements ICountryDao {
     /**
      * Create the new instance for session factory injection
      *

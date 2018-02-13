@@ -8,17 +8,17 @@ package com.example.demo.entity.domain;
 import com.example.demo.entity.common.Person;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class TypePerson extends BaseDomainEntity{
+public class TypePerson extends BaseDomainEntity {
 
     /**
      * @return the persons
@@ -33,7 +33,8 @@ public class TypePerson extends BaseDomainEntity{
     public void setPersons(Set<Person> persons) {
         this.persons = persons;
     }
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "typePerson")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "typePerson")
     @JsonIgnore
     private Set<Person> persons;
 }

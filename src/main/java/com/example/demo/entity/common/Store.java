@@ -10,15 +10,11 @@ import com.example.demo.entity.domain.Town;
 import com.example.demo.entity.domain.TypeStore;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 /**
- *
  * @author fcortez
  */
 @Entity
@@ -53,7 +49,7 @@ public class Store extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
     @JsonIgnore
     private Set<EmployeeStore> employeeStores;
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
     @JsonIgnore
     private Set<Inventory> inventorys;

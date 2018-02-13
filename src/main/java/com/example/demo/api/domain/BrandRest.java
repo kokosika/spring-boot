@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
-@RequestMapping(value="api/brand")
-public class BrandRest extends BaseRest<Brand, Integer>{
-    
+@RequestMapping(value = "api/brand")
+public class BrandRest extends BaseRest<Brand, Integer> {
+
     private final IBrandBlo brandBlo;
-    
+
     /**
      * Inject blo
      *
@@ -31,5 +30,5 @@ public class BrandRest extends BaseRest<Brand, Integer>{
         this.brandBlo = brandBlo;
     }
 
-    
+
 }

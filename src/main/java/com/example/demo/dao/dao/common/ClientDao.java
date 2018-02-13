@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class ClientDao extends BaseDao<Client,Integer> implements IClientDao {
+public class ClientDao extends BaseDao<Client, Integer> implements IClientDao {
 
 
     /**

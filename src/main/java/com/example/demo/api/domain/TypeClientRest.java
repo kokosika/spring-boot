@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
-@RequestMapping(value="api/type-client")
-public class TypeClientRest extends BaseRest<TypeClient, Integer>{
-    
+@RequestMapping(value = "api/type-client")
+public class TypeClientRest extends BaseRest<TypeClient, Integer> {
+
     private final ITypeClientBlo typeClientBlo;
-    
+
     /**
      * Inject blo
      *
@@ -31,5 +30,5 @@ public class TypeClientRest extends BaseRest<TypeClient, Integer>{
         this.typeClientBlo = typeClientBlo;
     }
 
-    
+
 }

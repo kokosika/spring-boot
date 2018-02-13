@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api/state-user")
-public class StateUserRest extends BaseRest<StateUser,Integer> {
+public class StateUserRest extends BaseRest<StateUser, Integer> {
 
 
     private final IStateUserBlo stateUserBlo;

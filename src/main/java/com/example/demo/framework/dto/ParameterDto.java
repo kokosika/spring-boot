@@ -7,9 +7,10 @@ public class ParameterDto implements Serializable {
     private String name;
     private Object data;
 
-    public ParameterDto(){}
+    public ParameterDto() {
+    }
 
-    public ParameterDto(String name,Object data){
+    public ParameterDto(String name, Object data) {
         this.name = name;
         this.data = data;
     }

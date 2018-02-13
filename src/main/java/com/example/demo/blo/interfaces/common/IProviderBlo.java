@@ -9,9 +9,8 @@ import com.example.demo.entity.common.Provider;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface IProviderBlo extends IBaseBlo<Provider, Integer>{
-    
+public interface IProviderBlo extends IBaseBlo<Provider, Integer> {
+
 }

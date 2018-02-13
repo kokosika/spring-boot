@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Province;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface IProvinceDao extends IBaseDao<Province, Integer>{
-    
+public interface IProvinceDao extends IBaseDao<Province, Integer> {
+
 }

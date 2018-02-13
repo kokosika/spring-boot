@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Region;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface IRegionDao extends IBaseDao<Region, Integer>{
-    
+public interface IRegionDao extends IBaseDao<Region, Integer> {
+
 }

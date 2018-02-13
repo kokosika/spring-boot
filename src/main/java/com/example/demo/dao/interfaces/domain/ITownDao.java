@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Town;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface ITownDao extends IBaseDao<Town, Integer>{
-    
+public interface ITownDao extends IBaseDao<Town, Integer> {
+
 }

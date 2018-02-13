@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.Serializable;
 
-public class BaseRest<T,ID extends Serializable>  {
+public class BaseRest<T, ID extends Serializable> {
 
     private final IBaseBlo baseBlo;
 
     /**
      * Inject blo
+     *
      * @param baseBlo interfaz blo
      */
     public BaseRest(IBaseBlo baseBlo) {
@@ -36,7 +37,7 @@ public class BaseRest<T,ID extends Serializable>  {
     }
 
     @PutMapping
-    public ResponseEntity<ResponseDto> update(@RequestParam Integer id,@RequestBody T entity) {
+    public ResponseEntity<ResponseDto> update(@RequestParam Integer id, @RequestBody T entity) {
         return this.baseBlo.update(entity);
     }
 

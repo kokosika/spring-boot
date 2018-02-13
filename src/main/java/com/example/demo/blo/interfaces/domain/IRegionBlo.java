@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Region;
 import com.example.demo.framework.blo.IBaseBlo;
 
 /**
- *
  * @author fcortez
  */
-public interface IRegionBlo extends IBaseBlo<Region, Integer>{
-    
+public interface IRegionBlo extends IBaseBlo<Region, Integer> {
+
 }

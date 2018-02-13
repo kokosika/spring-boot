@@ -8,12 +8,13 @@ import org.springframework.http.ResponseEntity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class BaseBlo <T extends BaseEntity,ID extends Serializable> extends BaseResponse implements IBaseBlo<T,ID> {
+public class BaseBlo<T extends BaseEntity, ID extends Serializable> extends BaseResponse implements IBaseBlo<T, ID> {
 
     protected final IBaseDao baseDao;
 
     /**
      * Inject dao
+     *
      * @param baseDao base dao
      */
     public BaseBlo(IBaseDao baseDao) {

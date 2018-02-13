@@ -1,8 +1,6 @@
 package com.example.demo.dao.dao.common;
 
-import com.example.demo.dao.interfaces.common.IAccounAccessDao;
 import com.example.demo.dao.interfaces.common.IInventoryDao;
-import com.example.demo.entity.common.AccountAccess;
 import com.example.demo.entity.common.Inventory;
 import com.example.demo.framework.dao.BaseDao;
 import org.hibernate.SessionFactory;
@@ -13,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class InventoryDao extends BaseDao<Inventory,Integer> implements IInventoryDao {
+public class InventoryDao extends BaseDao<Inventory, Integer> implements IInventoryDao {
     /**
      * Create the new instance for session factory injection
      *

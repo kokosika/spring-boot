@@ -7,21 +7,21 @@ package com.example.demo.entity.common;
 
 import com.example.demo.entity.domain.TypeProvider;
 import com.example.demo.framework.entity.BaseEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class Provider extends BaseEntity{
-    
+public class Provider extends BaseEntity {
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeProvider typeProvider;
@@ -41,5 +41,5 @@ public class Provider extends BaseEntity{
     public void setTypeProvider(TypeProvider typeProvider) {
         this.typeProvider = typeProvider;
     }
-    
+
 }

@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class PersonDao extends BaseDao<Person,Integer> implements IPersonDao {
+public class PersonDao extends BaseDao<Person, Integer> implements IPersonDao {
     /**
      * Create the new instance for session factory injection
      *

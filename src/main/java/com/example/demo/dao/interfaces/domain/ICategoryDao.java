@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Category;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface ICategoryDao extends IBaseDao<Category, Integer>{
-    
+public interface ICategoryDao extends IBaseDao<Category, Integer> {
+
 }

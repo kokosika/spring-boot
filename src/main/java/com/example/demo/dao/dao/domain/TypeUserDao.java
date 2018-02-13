@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class TypeUserDao extends BaseDao<TypeUser,Integer> implements ITypeUserDao {
+public class TypeUserDao extends BaseDao<TypeUser, Integer> implements ITypeUserDao {
 
     /**
      * Create the new instance for session factory injection

@@ -6,20 +6,19 @@
 package com.example.demo.entity.domain;
 
 import com.example.demo.entity.common.Client;
-import com.example.demo.entity.common.Employee;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class TypeClient extends BaseDomainEntity{
+public class TypeClient extends BaseDomainEntity {
 
     /**
      * @return the clients
@@ -34,9 +33,9 @@ public class TypeClient extends BaseDomainEntity{
     public void setClients(Set<Client> clients) {
         this.clients = clients;
     }
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "typeClient")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "typeClient")
     @JsonIgnore
     private Set<Client> clients;
-    
+
 }

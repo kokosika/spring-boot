@@ -7,22 +7,22 @@ package com.example.demo.entity.common;
 
 import com.example.demo.entity.domain.UrlAccess;
 import com.example.demo.framework.entity.BaseDomainEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- *
  * @author fcortez
  */
 
 @Entity
-public class AccountAccess extends BaseDomainEntity{
-    
+public class AccountAccess extends BaseDomainEntity {
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private UrlAccess urlAccess;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Account account;

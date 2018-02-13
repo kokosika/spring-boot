@@ -5,24 +5,21 @@
  */
 package com.example.demo.api.domain;
 
-import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.blo.interfaces.domain.ITypeStoreBlo;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeStore;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
  * @author fcortez
  */
 @RestController
-@RequestMapping(value="api/type-store")
-public class TypeStoreRest extends BaseRest<TypeStore, Integer>{
-    
+@RequestMapping(value = "api/type-store")
+public class TypeStoreRest extends BaseRest<TypeStore, Integer> {
+
     private final ITypeStoreBlo typeStoreBlo;
-    
+
     /**
      * Inject blo
      *
@@ -33,5 +30,5 @@ public class TypeStoreRest extends BaseRest<TypeStore, Integer>{
         this.typeStoreBlo = typeStoreBlo;
     }
 
-    
+
 }

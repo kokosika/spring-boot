@@ -9,9 +9,8 @@ import com.example.demo.entity.domain.Brand;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface IBrandDao extends IBaseDao<Brand, Integer>{
-    
+public interface IBrandDao extends IBaseDao<Brand, Integer> {
+
 }

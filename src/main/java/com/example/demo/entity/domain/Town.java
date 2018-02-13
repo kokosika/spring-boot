@@ -9,30 +9,26 @@ import com.example.demo.entity.common.Person;
 import com.example.demo.entity.common.Store;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class Town extends BaseDomainEntity{
-    
+public class Town extends BaseDomainEntity {
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Province province;
-    
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "town")
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "town")
     @JsonIgnore
     private Set<Person> persons;
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "town")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "town")
     @JsonIgnore
     private Set<Store> stores;
 
@@ -59,7 +55,6 @@ public class Town extends BaseDomainEntity{
     public void setStores(Set<Store> stores) {
         this.stores = stores;
     }
-    
-    
-    
+
+
 }

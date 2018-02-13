@@ -5,14 +5,12 @@
  */
 package com.example.demo.dao.interfaces.domain;
 
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeOperation;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface ITypeOperationDao extends IBaseDao<TypeOperation, Integer>{
-    
+public interface ITypeOperationDao extends IBaseDao<TypeOperation, Integer> {
+
 }

@@ -5,14 +5,12 @@
  */
 package com.example.demo.dao.interfaces.domain;
 
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.TypeJob;
 import com.example.demo.framework.dao.IBaseDao;
 
 /**
- *
  * @author fcortez
  */
-public interface ITypeJobDao extends IBaseDao<TypeJob, Integer>{
-    
+public interface ITypeJobDao extends IBaseDao<TypeJob, Integer> {
+
 }

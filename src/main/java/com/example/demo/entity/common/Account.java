@@ -7,19 +7,15 @@ package com.example.demo.entity.common;
 
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class Account extends BaseEntity{
+public class Account extends BaseEntity {
 
     /**
      * @return the accountAccesses
@@ -34,16 +30,16 @@ public class Account extends BaseEntity{
     public void setAccountAccesses(Set<AccountAccess> accountAccesses) {
         this.accountAccesses = accountAccesses;
     }
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private User user;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
-    
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
     @JsonIgnore
     private Set<AccountAccess> accountAccesses;
 
@@ -62,7 +58,6 @@ public class Account extends BaseEntity{
     public void setPerson(Person person) {
         this.person = person;
     }
-    
-    
-    
+
+
 }

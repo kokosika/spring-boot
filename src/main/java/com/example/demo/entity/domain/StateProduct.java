@@ -7,19 +7,18 @@ package com.example.demo.entity.domain;
 
 import com.example.demo.entity.common.Product;
 import com.example.demo.framework.entity.BaseDomainEntity;
-import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class StateProduct extends BaseDomainEntity{
+public class StateProduct extends BaseDomainEntity {
 
     /**
      * @return the products
@@ -34,7 +33,8 @@ public class StateProduct extends BaseDomainEntity{
     public void setProducts(Set<Product> products) {
         this.products = products;
     }
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "stateProduct")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "stateProduct")
     @JsonIgnore
     private Set<Product> products;
 }

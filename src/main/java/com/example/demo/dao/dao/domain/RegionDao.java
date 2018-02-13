@@ -14,14 +14,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
  * @author fcortez
  */
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class RegionDao extends BaseDao<Region, Integer> implements IRegionDao{
-    
+public class RegionDao extends BaseDao<Region, Integer> implements IRegionDao {
+
     /**
      * Create the new instance for session factory injection
      *
@@ -30,5 +29,5 @@ public class RegionDao extends BaseDao<Region, Integer> implements IRegionDao{
     public RegionDao(SessionFactory sessionFactory) {
         super(sessionFactory);
     }
-    
+
 }

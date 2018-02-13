@@ -4,11 +4,10 @@ import com.example.demo.blo.interfaces.domain.IStatePersonBlo;
 import com.example.demo.dao.interfaces.domain.IStatePersonDao;
 import com.example.demo.entity.domain.StatePerson;
 import com.example.demo.framework.blo.BaseDomainBlo;
-import com.example.demo.framework.dao.IBaseDao;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StatePersonBlo extends BaseDomainBlo<StatePerson,Integer> implements IStatePersonBlo {
+public class StatePersonBlo extends BaseDomainBlo<StatePerson, Integer> implements IStatePersonBlo {
 
     private final IStatePersonDao statePersonDao;
 

@@ -5,68 +5,59 @@
  */
 package com.example.demo.entity.common;
 
-import com.example.demo.entity.domain.Province;
 import com.example.demo.entity.domain.StatePerson;
 import com.example.demo.entity.domain.Town;
 import com.example.demo.entity.domain.TypePerson;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class Person extends BaseEntity{
-    
-    @Column(length = 75,nullable = false)
+public class Person extends BaseEntity {
+
+    @Column(length = 75, nullable = false)
     private String firstName;
-    @Column(length = 75,nullable = false)
-    private String lastName;    
+    @Column(length = 75, nullable = false)
+    private String lastName;
     private Integer phone;
-    private Integer cellPhone;    
+    private Integer cellPhone;
     @Column(length = 100)
     private String address;
     @Temporal(TemporalType.DATE)
     private Date birthDate;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Town town;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private StatePerson statePerson;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypePerson typePerson;
-    
-    
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "person")
+
+
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "person")
     @JsonIgnore
     private Account accounts;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
     @JsonIgnore
     private Set<Client> clients;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
     @JsonIgnore
     private Set<Provider> providers;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
     @JsonIgnore
     private Set<Employee> employee;
 
@@ -77,7 +68,7 @@ public class Person extends BaseEntity{
     public void setTown(Town town) {
         this.town = town;
     }
-    
+
     public String getFirstName() {
         return firstName;
     }
@@ -173,6 +164,6 @@ public class Person extends BaseEntity{
     public void setEmployee(Set<Employee> employee) {
         this.employee = employee;
     }
-    
-    
+
+
 }

@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @EnableAutoConfiguration
 @Transactional
-public class StateUserDao extends BaseDao<StateUser,Integer> implements IStateUserDao {
+public class StateUserDao extends BaseDao<StateUser, Integer> implements IStateUserDao {
 
 
     /**

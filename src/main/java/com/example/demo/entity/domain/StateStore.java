@@ -5,23 +5,22 @@
  */
 package com.example.demo.entity.domain;
 
-import com.example.demo.entity.common.Product;
 import com.example.demo.entity.common.Store;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class StateStore extends BaseDomainEntity{
+public class StateStore extends BaseDomainEntity {
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "stateStore")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "stateStore")
     @JsonIgnore
     private Set<Store> stores;
 
@@ -38,5 +37,5 @@ public class StateStore extends BaseDomainEntity{
     public void setStores(Set<Store> stores) {
         this.stores = stores;
     }
-   
+
 }

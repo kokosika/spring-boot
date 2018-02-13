@@ -9,21 +9,14 @@ import com.example.demo.entity.domain.StateUser;
 import com.example.demo.entity.domain.TypeUser;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+
+import javax.persistence.*;
 
 /**
- *
  * @author fcortez
  */
 @Entity
-public class User extends BaseEntity{
+public class User extends BaseEntity {
 
     /**
      * @return the accounts
@@ -38,10 +31,10 @@ public class User extends BaseEntity{
     public void setAccounts(Account accounts) {
         this.accounts = accounts;
     }
-    
-    @Column(length = 100,nullable = false,unique = true)
+
+    @Column(length = 100, nullable = false, unique = true)
     private String userName;
-    @Column(length = 100,nullable = false)
+    @Column(length = 100, nullable = false)
     private String password;
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
@@ -49,10 +42,9 @@ public class User extends BaseEntity{
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeUser typeUser;
-    
-    
-    
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "user")
+
+
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     @JsonIgnore
     private Account accounts;
 
@@ -87,8 +79,6 @@ public class User extends BaseEntity{
     public void setTypeUser(TypeUser typeUser) {
         this.typeUser = typeUser;
     }
-    
-    
-    
-    
+
+
 }
