@@ -6,6 +6,7 @@
 package com.example.demo.entity.domain;
 
 import com.example.demo.entity.common.Person;
+import com.example.demo.entity.common.Store;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Set;
@@ -30,6 +31,10 @@ public class Town extends BaseDomainEntity{
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "town")
     @JsonIgnore
     private Set<Person> persons;
+    
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "town")
+    @JsonIgnore
+    private Set<Store> stores;
 
     public Province getProvince() {
         return province;
@@ -37,6 +42,22 @@ public class Town extends BaseDomainEntity{
 
     public void setProvince(Province province) {
         this.province = province;
+    }
+
+    public Set<Person> getPersons() {
+        return persons;
+    }
+
+    public void setPersons(Set<Person> persons) {
+        this.persons = persons;
+    }
+
+    public Set<Store> getStores() {
+        return stores;
+    }
+
+    public void setStores(Set<Store> stores) {
+        this.stores = stores;
     }
     
     

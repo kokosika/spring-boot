@@ -19,6 +19,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class TypeEmployee extends BaseDomainEntity{
+
+    /**
+     * @return the employees
+     */
+    public Set<Employee> getEmployees() {
+        return employees;
+    }
+
+    /**
+     * @param employees the employees to set
+     */
+    public void setEmployees(Set<Employee> employees) {
+        this.employees = employees;
+    }
     
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "typeEmployee")
     @JsonIgnore

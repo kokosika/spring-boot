@@ -17,6 +17,20 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Employee extends BaseEntity{
+
+    /**
+     * @return the typeEmployee
+     */
+    public TypeEmployee getTypeEmployee() {
+        return typeEmployee;
+    }
+
+    /**
+     * @param typeEmployee the typeEmployee to set
+     */
+    public void setTypeEmployee(TypeEmployee typeEmployee) {
+        this.typeEmployee = typeEmployee;
+    }
     
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
@@ -35,10 +49,10 @@ public class Employee extends BaseEntity{
     }
 
     public TypeEmployee getEmployee() {
-        return typeEmployee;
+        return getTypeEmployee();
     }
 
     public void setEmployee(TypeEmployee typeEmployee) {
-        this.typeEmployee = typeEmployee;
+        this.setTypeEmployee(typeEmployee);
     }
 }

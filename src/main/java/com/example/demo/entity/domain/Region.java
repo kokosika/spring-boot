@@ -20,6 +20,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Region extends BaseDomainEntity{
+
+    /**
+     * @return the provinces
+     */
+    public Set<Province> getProvinces() {
+        return provinces;
+    }
+
+    /**
+     * @param provinces the provinces to set
+     */
+    public void setProvinces(Set<Province> provinces) {
+        this.provinces = provinces;
+    }
     
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)

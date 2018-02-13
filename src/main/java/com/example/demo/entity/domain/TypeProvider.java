@@ -20,6 +20,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class TypeProvider extends BaseDomainEntity{
+
+    /**
+     * @return the providers
+     */
+    public Set<Provider> getProviders() {
+        return providers;
+    }
+
+    /**
+     * @param providers the providers to set
+     */
+    public void setProviders(Set<Provider> providers) {
+        this.providers = providers;
+    }
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "typeProvider")
     @JsonIgnore
     private Set<Provider> providers;

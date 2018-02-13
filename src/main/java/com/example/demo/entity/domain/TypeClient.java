@@ -20,6 +20,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class TypeClient extends BaseDomainEntity{
+
+    /**
+     * @return the clients
+     */
+    public Set<Client> getClients() {
+        return clients;
+    }
+
+    /**
+     * @param clients the clients to set
+     */
+    public void setClients(Set<Client> clients) {
+        this.clients = clients;
+    }
     
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "typeClient")
     @JsonIgnore

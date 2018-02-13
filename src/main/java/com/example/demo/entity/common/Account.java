@@ -20,6 +20,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Account extends BaseEntity{
+
+    /**
+     * @return the accountAccesses
+     */
+    public Set<AccountAccess> getAccountAccesses() {
+        return accountAccesses;
+    }
+
+    /**
+     * @param accountAccesses the accountAccesses to set
+     */
+    public void setAccountAccesses(Set<AccountAccess> accountAccesses) {
+        this.accountAccesses = accountAccesses;
+    }
     
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)

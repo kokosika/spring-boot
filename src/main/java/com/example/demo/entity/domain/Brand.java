@@ -19,6 +19,20 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Brand extends BaseDomainEntity{
+
+    /**
+     * @return the products
+     */
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    /**
+     * @param products the products to set
+     */
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+    }
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "brand")
     @JsonIgnore
     private Set<Product> products;
