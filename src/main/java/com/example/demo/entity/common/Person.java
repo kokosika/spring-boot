@@ -62,6 +62,14 @@ public class Person extends BaseEntity{
     @JsonIgnore
     private Set<Client> clients;
 
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    @JsonIgnore
+    private Set<Provider> providers;
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    @JsonIgnore
+    private Set<Employee> employee;
+
     public Town getTown() {
         return town;
     }
