@@ -5,7 +5,9 @@
  */
 package com.example.demo.entity.common;
 
+import com.example.demo.entity.domain.StateStore;
 import com.example.demo.entity.domain.Town;
+import com.example.demo.entity.domain.TypeStore;
 import com.example.demo.entity.domain.TypeUser;
 import com.example.demo.framework.entity.BaseEntity;
 import javax.persistence.Entity;
@@ -21,6 +23,14 @@ public class Store extends BaseEntity{
     
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
+    private TypeStore typeStore;    
+    
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private StateStore stateStore;    
+    
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
     private Town town;
 
     public Town getTown() {
@@ -30,5 +40,33 @@ public class Store extends BaseEntity{
     public void setTown(Town town) {
         this.town = town;
     }   
+
+    /**
+     * @return the typeStore
+     */
+    public TypeStore getTypeStore() {
+        return typeStore;
+    }
+
+    /**
+     * @param typeStore the typeStore to set
+     */
+    public void setTypeStore(TypeStore typeStore) {
+        this.typeStore = typeStore;
+    }
+
+    /**
+     * @return the stateStore
+     */
+    public StateStore getStateStore() {
+        return stateStore;
+    }
+
+    /**
+     * @param stateStore the stateStore to set
+     */
+    public void setStateStore(StateStore stateStore) {
+        this.stateStore = stateStore;
+    }
     
 }
