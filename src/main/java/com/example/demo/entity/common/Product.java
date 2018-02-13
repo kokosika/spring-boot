@@ -9,9 +9,13 @@ import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.Category;
 import com.example.demo.entity.domain.StateProduct;
 import com.example.demo.framework.entity.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -20,18 +24,6 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Product extends BaseEntity{
     
-    @JoinColumn(referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Category category;
-    
-    @JoinColumn(referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Brand brand;
-    
-    @JoinColumn(referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private StateProduct stateProduct;
-
     public Category getCategory() {
         return category;
     }
@@ -56,5 +48,19 @@ public class Product extends BaseEntity{
         this.stateProduct = stateProduct;
     }
     
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Category category;
     
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Brand brand;
+    
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private StateProduct stateProduct;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+    @JsonIgnore
+    private Set<Inventory> inventorys;
 }

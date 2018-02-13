@@ -8,7 +8,6 @@ package com.example.demo.entity.common;
 import com.example.demo.entity.domain.StateStore;
 import com.example.demo.entity.domain.Town;
 import com.example.demo.entity.domain.TypeStore;
-import com.example.demo.entity.domain.TypeUser;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Set;
@@ -54,6 +53,10 @@ public class Store extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
     @JsonIgnore
     private Set<EmployeeStore> employeeStores;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
+    @JsonIgnore
+    private Set<Inventory> inventorys;
 
     public Town getTown() {
         return town;
