@@ -54,6 +54,10 @@ public class Store extends BaseEntity {
     @JsonIgnore
     private Set<Inventory> inventorys;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
+    @JsonIgnore
+    private Set<Stock> stocks;
+
     public Town getTown() {
         return town;
     }

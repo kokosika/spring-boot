@@ -59,4 +59,8 @@ public class Product extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     @JsonIgnore
     private Set<Inventory> inventorys;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+    @JsonIgnore
+    private Set<Stock> stocks;
 }

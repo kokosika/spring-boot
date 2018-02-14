@@ -6,10 +6,10 @@
 package com.example.demo.entity.common;
 
 import com.example.demo.framework.entity.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @author fcortez
@@ -28,5 +28,13 @@ public class Inventory extends BaseEntity {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Operation operation;
+
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private InventoryCalendar inventoryCalendar;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "inventory")
+    @JsonIgnore
+    private Set<InventoryTime> inventoryTimes;
 
 }
