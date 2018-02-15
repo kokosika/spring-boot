@@ -10,11 +10,9 @@ com\example\demo\framework\entity\BaseDomainEntity.class
 com\example\demo\dao\dao\domain\TypeUserDao.class
 com\example\demo\dao\dao\domain\TypePersonDao.class
 com\example\demo\dao\interfaces\domain\ICountryDao.class
-com\example\demo\api\domain\StateUserRest.class
 com\example\demo\dao\dao\domain\StatePersonDao.class
 com\example\demo\DemoApplication.class
 com\example\demo\framework\blo\BaseDomainBlo.class
-com\example\demo\api\domain\CountryRest.class
 com\example\demo\framework\entity\BaseEntity.class
 com\example\demo\entity\domain\Country.class
 com\example\demo\entity\domain\StateUser.class
@@ -28,9 +26,7 @@ com\example\demo\entity\domain\Province.class
 com\example\demo\blo\interfaces\domain\ICountryBlo.class
 com\example\demo\framework\blo\IBaseBlo.class
 com\example\demo\blo\interfaces\domain\ITypePersonBlo.class
-com\example\demo\api\domain\TypeUserRest.class
 com\example\demo\blo\interfaces\domain\IStatePersonBlo.class
-com\example\demo\api\domain\TypePersonRest.class
 com\example\demo\blo\blo\domain\StatePersonBlo.class
 com\example\demo\blo\blo\domain\StateUserBlo.class
 com\example\demo\entity\common\User.class
@@ -48,4 +44,3 @@ com\example\demo\dao\interfaces\domain\IStateUserDao.class
 com\example\demo\framework\dto\ParameterDto.class
 com\example\demo\framework\blo\BaseBlo.class
 com\example\demo\entity\domain\TypePerson.class
-com\example\demo\api\domain\StatePersonRest.class
