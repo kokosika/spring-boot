@@ -21,19 +21,19 @@ import java.util.Set;
 public class Product extends BaseEntity {
 
     /**
-     * @return the buyProducts
+     * @return the buyProductDetails
      */
-    public Set<BuyProduct> getBuyProducts() {
-        return buyProducts;
+    public Set<BuyProductDetail> getBuyProductDetails() {
+        return buyProductDetails;
     }
 
     /**
-     * @param buyProducts the buyProducts to set
+     * @param buyProductDetails the buyProductDetails to set
      */
-    public void setBuyProducts(Set<BuyProduct> buyProducts) {
-        this.buyProducts = buyProducts;
+    public void setBuyProductDetails(Set<BuyProductDetail> buyProductDetails) {
+        this.buyProductDetails = buyProductDetails;
     }
-
+    
     /**
      * @return the category
      */
@@ -126,5 +126,5 @@ public class Product extends BaseEntity {
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     @JsonIgnore
-    private Set<BuyProduct> buyProducts;
+    private Set<BuyProductDetail> buyProductDetails;
 }

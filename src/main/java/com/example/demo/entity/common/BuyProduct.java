@@ -18,6 +18,20 @@ import java.util.Set;
 public class BuyProduct extends BaseEntity {
 
     /**
+     * @return the buyProductDetails
+     */
+    public Set<BuyProductDetail> getBuyProductDetails() {
+        return buyProductDetails;
+    }
+
+    /**
+     * @param buyProductDetails the buyProductDetails to set
+     */
+    public void setBuyProductDetails(Set<BuyProductDetail> buyProductDetails) {
+        this.buyProductDetails = buyProductDetails;
+    }
+
+    /**
      * @return the provider
      */
     public Provider getProvider() {
@@ -29,20 +43,6 @@ public class BuyProduct extends BaseEntity {
      */
     public void setProvider(Provider provider) {
         this.provider = provider;
-    }
-
-    /**
-     * @return the product
-     */
-    public Product getProduct() {
-        return product;
-    }
-
-    /**
-     * @param product the product to set
-     */
-    public void setProduct(Product product) {
-        this.product = product;
     }
 
     /**
@@ -63,12 +63,12 @@ public class BuyProduct extends BaseEntity {
     @ManyToOne(optional = false)
     private Provider provider;
     
-    @JoinColumn(referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Product product;
-    
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "buyProduct")
     @JsonIgnore
     private Set<BuyProductCalendar> buyProductCalendars;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "buyProduct")
+    @JsonIgnore
+    private Set<BuyProductDetail> buyProductDetails;
     
 }
