@@ -5,6 +5,7 @@
  */
 package com.example.demo.entity.common;
 
+import com.example.demo.entity.domain.StateAccount;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -16,6 +17,20 @@ import java.util.Set;
  */
 @Entity
 public class Account extends BaseEntity {
+
+    /**
+     * @return the stateAccount
+     */
+    public StateAccount getStateAccount() {
+        return stateAccount;
+    }
+
+    /**
+     * @param stateAccount the stateAccount to set
+     */
+    public void setStateAccount(StateAccount stateAccount) {
+        this.stateAccount = stateAccount;
+    }
 
     /**
      * @return the user
@@ -66,6 +81,10 @@ public class Account extends BaseEntity {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
+    
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private StateAccount stateAccount;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
     @JsonIgnore
