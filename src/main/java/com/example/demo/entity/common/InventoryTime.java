@@ -16,6 +16,20 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class InventoryTime extends BaseEntity {
+
+    /**
+     * @return the inventory
+     */
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    /**
+     * @param inventory the inventory to set
+     */
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Inventory inventory;

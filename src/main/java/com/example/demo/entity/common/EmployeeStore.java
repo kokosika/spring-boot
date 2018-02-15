@@ -59,7 +59,6 @@ public class EmployeeStore extends BaseEntity {
     public void setTypeJob(TypeJob typeJob) {
         this.typeJob = typeJob;
     }
-
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Employee employee;

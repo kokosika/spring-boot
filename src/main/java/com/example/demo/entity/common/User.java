@@ -19,6 +19,62 @@ import javax.persistence.*;
 public class User extends BaseEntity {
 
     /**
+     * @return the userName
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    /**
+     * @param userName the userName to set
+     */
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    /**
+     * @return the stateUser
+     */
+    public StateUser getStateUser() {
+        return stateUser;
+    }
+
+    /**
+     * @param stateUser the stateUser to set
+     */
+    public void setStateUser(StateUser stateUser) {
+        this.stateUser = stateUser;
+    }
+
+    /**
+     * @return the typeUser
+     */
+    public TypeUser getTypeUser() {
+        return typeUser;
+    }
+
+    /**
+     * @param typeUser the typeUser to set
+     */
+    public void setTypeUser(TypeUser typeUser) {
+        this.typeUser = typeUser;
+    }
+
+    /**
      * @return the accounts
      */
     public Account getAccounts() {
@@ -31,7 +87,6 @@ public class User extends BaseEntity {
     public void setAccounts(Account accounts) {
         this.accounts = accounts;
     }
-
     @Column(length = 100, nullable = false, unique = true)
     private String userName;
     @Column(length = 100, nullable = false)
@@ -47,38 +102,5 @@ public class User extends BaseEntity {
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     @JsonIgnore
     private Account accounts;
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public StateUser getStateUser() {
-        return stateUser;
-    }
-
-    public void setStateUser(StateUser stateUser) {
-        this.stateUser = stateUser;
-    }
-
-    public TypeUser getTypeUser() {
-        return typeUser;
-    }
-
-    public void setTypeUser(TypeUser typeUser) {
-        this.typeUser = typeUser;
-    }
-
 
 }

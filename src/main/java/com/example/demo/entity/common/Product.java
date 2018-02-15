@@ -20,28 +20,74 @@ import java.util.Set;
 @Entity
 public class Product extends BaseEntity {
 
+    /**
+     * @return the category
+     */
     public Category getCategory() {
         return category;
     }
 
+    /**
+     * @param category the category to set
+     */
     public void setCategory(Category category) {
         this.category = category;
     }
 
+    /**
+     * @return the brand
+     */
     public Brand getBrand() {
         return brand;
     }
 
+    /**
+     * @param brand the brand to set
+     */
     public void setBrand(Brand brand) {
         this.brand = brand;
     }
 
+    /**
+     * @return the stateProduct
+     */
     public StateProduct getStateProduct() {
         return stateProduct;
     }
 
+    /**
+     * @param stateProduct the stateProduct to set
+     */
     public void setStateProduct(StateProduct stateProduct) {
         this.stateProduct = stateProduct;
+    }
+
+    /**
+     * @return the inventorys
+     */
+    public Set<Inventory> getInventorys() {
+        return inventorys;
+    }
+
+    /**
+     * @param inventorys the inventorys to set
+     */
+    public void setInventorys(Set<Inventory> inventorys) {
+        this.inventorys = inventorys;
+    }
+
+    /**
+     * @return the stocks
+     */
+    public Set<Stock> getStocks() {
+        return stocks;
+    }
+
+    /**
+     * @param stocks the stocks to set
+     */
+    public void setStocks(Set<Stock> stocks) {
+        this.stocks = stocks;
     }
 
     @JoinColumn(referencedColumnName = "id")

@@ -17,6 +17,51 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Stock extends BaseEntity {
 
+    /**
+     * @return the stock
+     */
+    public Double getStock() {
+        return stock;
+    }
+
+    /**
+     * @param stock the stock to set
+     */
+    public void setStock(Double stock) {
+        this.stock = stock;
+    }
+
+    /**
+     * @return the product
+     */
+    public Product getProduct() {
+        return product;
+    }
+
+    /**
+     * @param product the product to set
+     */
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    /**
+     * @return the store
+     */
+    public Store getStore() {
+        return store;
+    }
+
+    /**
+     * @param store the store to set
+     */
+    public void setStore(Store store) {
+        this.store = store;
+    }
+    
+    
+    private Double stock;
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Product product;
@@ -25,6 +70,5 @@ public class Stock extends BaseEntity {
     @ManyToOne(optional = false)
     private Store store;
 
-    private Double stock;
 
 }

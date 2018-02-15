@@ -19,6 +19,48 @@ import java.util.Set;
 @Entity
 public class Town extends BaseDomainEntity {
 
+    /**
+     * @return the province
+     */
+    public Province getProvince() {
+        return province;
+    }
+
+    /**
+     * @param province the province to set
+     */
+    public void setProvince(Province province) {
+        this.province = province;
+    }
+
+    /**
+     * @return the persons
+     */
+    public Set<Person> getPersons() {
+        return persons;
+    }
+
+    /**
+     * @param persons the persons to set
+     */
+    public void setPersons(Set<Person> persons) {
+        this.persons = persons;
+    }
+
+    /**
+     * @return the stores
+     */
+    public Set<Store> getStores() {
+        return stores;
+    }
+
+    /**
+     * @param stores the stores to set
+     */
+    public void setStores(Set<Store> stores) {
+        this.stores = stores;
+    }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Province province;
@@ -31,30 +73,5 @@ public class Town extends BaseDomainEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "town")
     @JsonIgnore
     private Set<Store> stores;
-
-    public Province getProvince() {
-        return province;
-    }
-
-    public void setProvince(Province province) {
-        this.province = province;
-    }
-
-    public Set<Person> getPersons() {
-        return persons;
-    }
-
-    public void setPersons(Set<Person> persons) {
-        this.persons = persons;
-    }
-
-    public Set<Store> getStores() {
-        return stores;
-    }
-
-    public void setStores(Set<Store> stores) {
-        this.stores = stores;
-    }
-
 
 }

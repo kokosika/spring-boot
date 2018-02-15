@@ -20,10 +20,6 @@ import java.util.Set;
 @Entity
 public class StateStore extends BaseDomainEntity {
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "stateStore")
-    @JsonIgnore
-    private Set<Store> stores;
-
     /**
      * @return the stores
      */
@@ -38,4 +34,7 @@ public class StateStore extends BaseDomainEntity {
         this.stores = stores;
     }
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "stateStore")
+    @JsonIgnore
+    private Set<Store> stores;
 }

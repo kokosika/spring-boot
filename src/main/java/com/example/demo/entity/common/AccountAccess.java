@@ -19,6 +19,34 @@ import javax.persistence.ManyToOne;
 @Entity
 public class AccountAccess extends BaseDomainEntity {
 
+    /**
+     * @return the urlAccess
+     */
+    public UrlAccess getUrlAccess() {
+        return urlAccess;
+    }
+
+    /**
+     * @param urlAccess the urlAccess to set
+     */
+    public void setUrlAccess(UrlAccess urlAccess) {
+        this.urlAccess = urlAccess;
+    }
+
+    /**
+     * @return the account
+     */
+    public Account getAccount() {
+        return account;
+    }
+
+    /**
+     * @param account the account to set
+     */
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private UrlAccess urlAccess;
@@ -27,19 +55,4 @@ public class AccountAccess extends BaseDomainEntity {
     @ManyToOne(optional = false)
     private Account account;
 
-    public UrlAccess getUrlAccess() {
-        return urlAccess;
-    }
-
-    public void setUrlAccess(UrlAccess urlAccess) {
-        this.urlAccess = urlAccess;
-    }
-
-    public Account getAccount() {
-        return account;
-    }
-
-    public void setAccount(Account account) {
-        this.account = account;
-    }
 }

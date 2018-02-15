@@ -18,6 +18,48 @@ import java.util.Set;
 @Entity
 public class Operation extends BaseEntity {
 
+    /**
+     * @return the typeOperation
+     */
+    public TypeOperation getTypeOperation() {
+        return typeOperation;
+    }
+
+    /**
+     * @param typeOperation the typeOperation to set
+     */
+    public void setTypeOperation(TypeOperation typeOperation) {
+        this.typeOperation = typeOperation;
+    }
+
+    /**
+     * @return the employee
+     */
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    /**
+     * @param employee the employee to set
+     */
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    /**
+     * @return the inventorys
+     */
+    public Set<Inventory> getInventorys() {
+        return inventorys;
+    }
+
+    /**
+     * @param inventorys the inventorys to set
+     */
+    public void setInventorys(Set<Inventory> inventorys) {
+        this.inventorys = inventorys;
+    }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeOperation typeOperation;

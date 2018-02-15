@@ -18,6 +18,34 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Provider extends BaseEntity {
 
+    /**
+     * @return the person
+     */
+    public Person getPerson() {
+        return person;
+    }
+
+    /**
+     * @param person the person to set
+     */
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    /**
+     * @return the typeProvider
+     */
+    public TypeProvider getTypeProvider() {
+        return typeProvider;
+    }
+
+    /**
+     * @param typeProvider the typeProvider to set
+     */
+    public void setTypeProvider(TypeProvider typeProvider) {
+        this.typeProvider = typeProvider;
+    }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
@@ -25,21 +53,5 @@ public class Provider extends BaseEntity {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeProvider typeProvider;
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public TypeProvider getTypeProvider() {
-        return typeProvider;
-    }
-
-    public void setTypeProvider(TypeProvider typeProvider) {
-        this.typeProvider = typeProvider;
-    }
 
 }

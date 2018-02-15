@@ -19,6 +19,20 @@ import java.util.Set;
 @Entity
 public class InventoryCalendar extends BaseEntity {
 
+    /**
+     * @return the inventories
+     */
+    public Set<Inventory> getInventories() {
+        return inventories;
+    }
+
+    /**
+     * @param inventories the inventories to set
+     */
+    public void setInventories(Set<Inventory> inventories) {
+        this.inventories = inventories;
+    }
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "inventoryCalendar")
     @JsonIgnore
     private Set<Inventory> inventories;

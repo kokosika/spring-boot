@@ -33,7 +33,6 @@ public class TypeClient extends BaseDomainEntity {
     public void setClients(Set<Client> clients) {
         this.clients = clients;
     }
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "typeClient")
     @JsonIgnore
     private Set<Client> clients;

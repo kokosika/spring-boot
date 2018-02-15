@@ -19,17 +19,17 @@ import java.util.Set;
 public class Employee extends BaseEntity {
 
     /**
-     * @return the employeeStores
+     * @return the person
      */
-    public Set<EmployeeStore> getEmployeeStores() {
-        return employeeStores;
+    public Person getPerson() {
+        return person;
     }
 
     /**
-     * @param employeeStores the employeeStores to set
+     * @param person the person to set
      */
-    public void setEmployeeStores(Set<EmployeeStore> employeeStores) {
-        this.employeeStores = employeeStores;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     /**
@@ -46,6 +46,33 @@ public class Employee extends BaseEntity {
         this.typeEmployee = typeEmployee;
     }
 
+    /**
+     * @return the employeeStores
+     */
+    public Set<EmployeeStore> getEmployeeStores() {
+        return employeeStores;
+    }
+
+    /**
+     * @param employeeStores the employeeStores to set
+     */
+    public void setEmployeeStores(Set<EmployeeStore> employeeStores) {
+        this.employeeStores = employeeStores;
+    }
+
+    /**
+     * @return the operations
+     */
+    public Set<Operation> getOperations() {
+        return operations;
+    }
+
+    /**
+     * @param operations the operations to set
+     */
+    public void setOperations(Set<Operation> operations) {
+        this.operations = operations;
+    }
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
@@ -62,19 +89,4 @@ public class Employee extends BaseEntity {
     @JsonIgnore
     private Set<Operation> operations;
 
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public TypeEmployee getEmployee() {
-        return getTypeEmployee();
-    }
-
-    public void setEmployee(TypeEmployee typeEmployee) {
-        this.setTypeEmployee(typeEmployee);
-    }
 }

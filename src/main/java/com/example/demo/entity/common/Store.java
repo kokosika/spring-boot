@@ -21,52 +21,6 @@ import java.util.Set;
 public class Store extends BaseEntity {
 
     /**
-     * @return the employeeStores
-     */
-    public Set<EmployeeStore> getEmployeeStores() {
-        return employeeStores;
-    }
-
-    /**
-     * @param employeeStores the employeeStores to set
-     */
-    public void setEmployeeStores(Set<EmployeeStore> employeeStores) {
-        this.employeeStores = employeeStores;
-    }
-
-    @JoinColumn(referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private TypeStore typeStore;
-
-    @JoinColumn(referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private StateStore stateStore;
-
-    @JoinColumn(referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Town town;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
-    @JsonIgnore
-    private Set<EmployeeStore> employeeStores;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
-    @JsonIgnore
-    private Set<Inventory> inventorys;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
-    @JsonIgnore
-    private Set<Stock> stocks;
-
-    public Town getTown() {
-        return town;
-    }
-
-    public void setTown(Town town) {
-        this.town = town;
-    }
-
-    /**
      * @return the typeStore
      */
     public TypeStore getTypeStore() {
@@ -93,5 +47,84 @@ public class Store extends BaseEntity {
     public void setStateStore(StateStore stateStore) {
         this.stateStore = stateStore;
     }
+
+    /**
+     * @return the town
+     */
+    public Town getTown() {
+        return town;
+    }
+
+    /**
+     * @param town the town to set
+     */
+    public void setTown(Town town) {
+        this.town = town;
+    }
+
+    /**
+     * @return the employeeStores
+     */
+    public Set<EmployeeStore> getEmployeeStores() {
+        return employeeStores;
+    }
+
+    /**
+     * @param employeeStores the employeeStores to set
+     */
+    public void setEmployeeStores(Set<EmployeeStore> employeeStores) {
+        this.employeeStores = employeeStores;
+    }
+
+    /**
+     * @return the inventorys
+     */
+    public Set<Inventory> getInventorys() {
+        return inventorys;
+    }
+
+    /**
+     * @param inventorys the inventorys to set
+     */
+    public void setInventorys(Set<Inventory> inventorys) {
+        this.inventorys = inventorys;
+    }
+
+    /**
+     * @return the stocks
+     */
+    public Set<Stock> getStocks() {
+        return stocks;
+    }
+
+    /**
+     * @param stocks the stocks to set
+     */
+    public void setStocks(Set<Stock> stocks) {
+        this.stocks = stocks;
+    }
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private TypeStore typeStore;
+
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private StateStore stateStore;
+
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Town town;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
+    @JsonIgnore
+    private Set<EmployeeStore> employeeStores;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
+    @JsonIgnore
+    private Set<Inventory> inventorys;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
+    @JsonIgnore
+    private Set<Stock> stocks;
 
 }

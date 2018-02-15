@@ -33,7 +33,6 @@ public class TypeUser extends BaseDomainEntity {
     public void setUsers(Set<User> users) {
         this.users = users;
     }
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "typeUser")
     @JsonIgnore
     private Set<User> users;

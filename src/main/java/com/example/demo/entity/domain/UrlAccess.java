@@ -20,20 +20,19 @@
  @Entity
  public class UrlAccess extends BaseDomainEntity {
 
-     /**
-      * @return the accountAccesses
-      */
-     public Set<AccountAccess> getAccountAccesses() {
-         return accountAccesses;
-     }
+    /**
+     * @return the accountAccesses
+     */
+    public Set<AccountAccess> getAccountAccesses() {
+        return accountAccesses;
+    }
 
-     /**
-      * @param accountAccesses the accountAccesses to set
-      */
-     public void setAccountAccesses(Set<AccountAccess> accountAccesses) {
-         this.accountAccesses = accountAccesses;
-     }
-
+    /**
+     * @param accountAccesses the accountAccesses to set
+     */
+    public void setAccountAccesses(Set<AccountAccess> accountAccesses) {
+        this.accountAccesses = accountAccesses;
+    }
      @OneToMany(cascade = CascadeType.ALL, mappedBy = "urlAccess")
      @JsonIgnore
      private Set<AccountAccess> accountAccesses;

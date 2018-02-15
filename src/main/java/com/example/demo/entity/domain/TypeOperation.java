@@ -20,6 +20,20 @@ import java.util.Set;
 @Entity
 public class TypeOperation extends BaseDomainEntity {
 
+    /**
+     * @return the operations
+     */
+    public Set<Operation> getOperations() {
+        return operations;
+    }
+
+    /**
+     * @param operations the operations to set
+     */
+    public void setOperations(Set<Operation> operations) {
+        this.operations = operations;
+    }
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "typeOperation")
     @JsonIgnore
     private Set<Operation> operations;

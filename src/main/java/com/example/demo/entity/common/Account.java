@@ -18,6 +18,34 @@ import java.util.Set;
 public class Account extends BaseEntity {
 
     /**
+     * @return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * @param user the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    /**
+     * @return the person
+     */
+    public Person getPerson() {
+        return person;
+    }
+
+    /**
+     * @param person the person to set
+     */
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    /**
      * @return the accountAccesses
      */
     public Set<AccountAccess> getAccountAccesses() {
@@ -42,22 +70,5 @@ public class Account extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
     @JsonIgnore
     private Set<AccountAccess> accountAccesses;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
 
 }

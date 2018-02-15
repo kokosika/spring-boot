@@ -18,28 +18,39 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Client extends BaseEntity {
 
+    /**
+     * @return the person
+     */
+    public Person getPerson() {
+        return person;
+    }
+
+    /**
+     * @param person the person to set
+     */
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    /**
+     * @return the typeClient
+     */
+    public TypeClient getTypeClient() {
+        return typeClient;
+    }
+
+    /**
+     * @param typeClient the typeClient to set
+     */
+    public void setTypeClient(TypeClient typeClient) {
+        this.typeClient = typeClient;
+    }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeClient typeClient;
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public TypeClient getTypeClient() {
-        return typeClient;
-    }
-
-    public void setTypeClient(TypeClient typeClient) {
-        this.typeClient = typeClient;
-    }
-
 
 }
