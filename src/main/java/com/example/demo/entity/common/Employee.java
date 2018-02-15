@@ -19,6 +19,20 @@ import java.util.Set;
 public class Employee extends BaseEntity {
 
     /**
+     * @return the buyProductCalendars
+     */
+    public Set<BuyProductCalendar> getBuyProductCalendars() {
+        return buyProductCalendars;
+    }
+
+    /**
+     * @param buyProductCalendars the buyProductCalendars to set
+     */
+    public void setBuyProductCalendars(Set<BuyProductCalendar> buyProductCalendars) {
+        this.buyProductCalendars = buyProductCalendars;
+    }
+
+    /**
      * @return the person
      */
     public Person getPerson() {
@@ -88,5 +102,9 @@ public class Employee extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
     @JsonIgnore
     private Set<Operation> operations;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
+    @JsonIgnore
+    private Set<BuyProductCalendar> buyProductCalendars;
 
 }

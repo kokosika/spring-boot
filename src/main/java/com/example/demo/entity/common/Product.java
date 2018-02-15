@@ -21,6 +21,20 @@ import java.util.Set;
 public class Product extends BaseEntity {
 
     /**
+     * @return the buyProducts
+     */
+    public Set<BuyProduct> getBuyProducts() {
+        return buyProducts;
+    }
+
+    /**
+     * @param buyProducts the buyProducts to set
+     */
+    public void setBuyProducts(Set<BuyProduct> buyProducts) {
+        this.buyProducts = buyProducts;
+    }
+
+    /**
      * @return the category
      */
     public Category getCategory() {
@@ -109,4 +123,8 @@ public class Product extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     @JsonIgnore
     private Set<Stock> stocks;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+    @JsonIgnore
+    private Set<BuyProduct> buyProducts;
 }
