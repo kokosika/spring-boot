@@ -33,7 +33,7 @@ public class Product extends BaseEntity {
     public void setBuyProductDetails(Set<BuyProductDetail> buyProductDetails) {
         this.buyProductDetails = buyProductDetails;
     }
-    
+
     /**
      * @return the category
      */
@@ -123,7 +123,7 @@ public class Product extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     @JsonIgnore
     private Set<Stock> stocks;
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     @JsonIgnore
     private Set<BuyProductDetail> buyProductDetails;

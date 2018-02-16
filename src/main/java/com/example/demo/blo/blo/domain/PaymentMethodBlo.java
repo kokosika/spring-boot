@@ -5,11 +5,8 @@
  */
 package com.example.demo.blo.blo.domain;
 
-import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.blo.interfaces.domain.IPaymentMethodBlo;
-import com.example.demo.dao.interfaces.domain.IBrandDao;
 import com.example.demo.dao.interfaces.domain.IPaymentMethodDao;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.PaymentMethod;
 import com.example.demo.framework.blo.BaseDomainBlo;
 import org.springframework.stereotype.Service;

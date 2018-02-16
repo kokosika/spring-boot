@@ -1,9 +1,7 @@
 package com.example.demo.api.rest.common;
 
 
-import com.example.demo.blo.interfaces.common.IAccountAccessBlo;
 import com.example.demo.blo.interfaces.common.IBuyProductBlo;
-import com.example.demo.entity.common.AccountAccess;
 import com.example.demo.entity.common.BuyProduct;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;

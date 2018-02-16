@@ -1,8 +1,6 @@
 package com.example.demo.dao.dao.common;
 
-import com.example.demo.dao.interfaces.common.IAccounAccessDao;
 import com.example.demo.dao.interfaces.common.IBuyProductDao;
-import com.example.demo.entity.common.AccountAccess;
 import com.example.demo.entity.common.BuyProduct;
 import com.example.demo.framework.dao.BaseDao;
 import org.hibernate.SessionFactory;

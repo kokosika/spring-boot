@@ -48,9 +48,9 @@ public class BuyProductCalendar extends BaseEntity {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private BuyProduct buyProduct;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Employee employee;
-    
+
 }

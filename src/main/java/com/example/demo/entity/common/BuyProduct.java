@@ -5,6 +5,8 @@
  */
 package com.example.demo.entity.common;
 
+import com.example.demo.entity.domain.PaymentMethod;
+import com.example.demo.entity.domain.TypeDocument;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -62,13 +64,27 @@ public class BuyProduct extends BaseEntity {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Provider provider;
-    
+
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private TypeDocument typeDocument;
+
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private PaymentMethod paymentMethod;
+
+    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Store store;
+
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "buyProduct")
     @JsonIgnore
     private Set<BuyProductCalendar> buyProductCalendars;
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "buyProduct")
     @JsonIgnore
     private Set<BuyProductDetail> buyProductDetails;
-    
+
+
 }

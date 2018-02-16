@@ -6,10 +6,10 @@
 package com.example.demo.entity.common;
 
 import com.example.demo.framework.entity.BaseEntity;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  * @author fcortez
@@ -44,10 +44,11 @@ public class BuyProductDetail extends BaseEntity {
     public void setProduct(Product product) {
         this.product = product;
     }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private BuyProduct buyProduct;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Product product;

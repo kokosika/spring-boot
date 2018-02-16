@@ -44,7 +44,7 @@ public class Region extends BaseDomainEntity {
     public void setProvinces(Set<Province> provinces) {
         this.provinces = provinces;
     }
-   
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Country country;

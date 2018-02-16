@@ -87,6 +87,7 @@ public class Employee extends BaseEntity {
     public void setOperations(Set<Operation> operations) {
         this.operations = operations;
     }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
@@ -102,7 +103,7 @@ public class Employee extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
     @JsonIgnore
     private Set<Operation> operations;
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
     @JsonIgnore
     private Set<BuyProductCalendar> buyProductCalendars;

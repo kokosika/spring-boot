@@ -87,6 +87,7 @@ public class User extends BaseEntity {
     public void setAccounts(Account accounts) {
         this.accounts = accounts;
     }
+
     @Column(length = 100, nullable = false, unique = true)
     private String userName;
     @Column(length = 100, nullable = false)

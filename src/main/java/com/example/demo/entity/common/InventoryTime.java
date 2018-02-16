@@ -30,6 +30,7 @@ public class InventoryTime extends BaseEntity {
     public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Inventory inventory;

@@ -8,13 +8,9 @@ package com.example.demo.entity.common;
 import com.example.demo.entity.domain.TypeProvider;
 import com.example.demo.framework.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.Set;
-import javax.persistence.CascadeType;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @author fcortez
@@ -71,7 +67,7 @@ public class Provider extends BaseEntity {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeProvider typeProvider;
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "provider")
     @JsonIgnore
     private Set<BuyProduct> buyProducts;

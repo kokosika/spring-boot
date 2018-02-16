@@ -32,7 +32,7 @@ public class Country extends BaseDomainEntity {
     public void setRegions(Set<Region> regions) {
         this.regions = regions;
     }
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
     @JsonIgnore
     private Set<Region> regions;

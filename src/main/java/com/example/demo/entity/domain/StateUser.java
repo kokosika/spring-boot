@@ -33,7 +33,7 @@ public class StateUser extends BaseDomainEntity {
     public void setUsers(Set<User> users) {
         this.users = users;
     }
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "stateUser")
     @JsonIgnore
     private Set<User> users;

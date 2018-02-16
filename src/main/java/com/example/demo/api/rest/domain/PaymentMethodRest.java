@@ -5,9 +5,7 @@
  */
 package com.example.demo.api.rest.domain;
 
-import com.example.demo.blo.interfaces.domain.IBrandBlo;
 import com.example.demo.blo.interfaces.domain.IPaymentMethodBlo;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.PaymentMethod;
 import com.example.demo.framework.rest.BaseRest;
 import org.springframework.web.bind.annotation.RequestMapping;

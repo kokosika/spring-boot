@@ -44,6 +44,7 @@ public class Province extends BaseDomainEntity {
     public void setTowns(Set<Town> towns) {
         this.towns = towns;
     }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Region region;

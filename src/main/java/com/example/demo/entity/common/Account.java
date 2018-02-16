@@ -81,7 +81,7 @@ public class Account extends BaseEntity {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Person person;
-    
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private StateAccount stateAccount;

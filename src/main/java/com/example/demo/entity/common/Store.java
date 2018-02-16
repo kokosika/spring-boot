@@ -103,6 +103,7 @@ public class Store extends BaseEntity {
     public void setStocks(Set<Stock> stocks) {
         this.stocks = stocks;
     }
+
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(optional = false)
     private TypeStore typeStore;
@@ -126,5 +127,9 @@ public class Store extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
     @JsonIgnore
     private Set<Stock> stocks;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
+    @JsonIgnore
+    private Set<BuyProduct> buyProducts;
 
 }

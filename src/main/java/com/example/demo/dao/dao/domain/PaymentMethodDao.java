@@ -5,9 +5,7 @@
  */
 package com.example.demo.dao.dao.domain;
 
-import com.example.demo.dao.interfaces.domain.IBrandDao;
 import com.example.demo.dao.interfaces.domain.IPaymentMethodDao;
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.PaymentMethod;
 import com.example.demo.framework.dao.BaseDao;
 import org.hibernate.SessionFactory;

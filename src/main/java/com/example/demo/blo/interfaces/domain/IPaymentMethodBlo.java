@@ -5,7 +5,6 @@
  */
 package com.example.demo.blo.interfaces.domain;
 
-import com.example.demo.entity.domain.Brand;
 import com.example.demo.entity.domain.PaymentMethod;
 import com.example.demo.framework.blo.IBaseBlo;
 

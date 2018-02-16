@@ -33,7 +33,7 @@ public class StateProduct extends BaseDomainEntity {
     public void setProducts(Set<Product> products) {
         this.products = products;
     }
-   
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "stateProduct")
     @JsonIgnore
     private Set<Product> products;

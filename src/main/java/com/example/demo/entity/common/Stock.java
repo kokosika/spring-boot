@@ -58,8 +58,8 @@ public class Stock extends BaseEntity {
     public void setStore(Store store) {
         this.store = store;
     }
-    
-    
+
+
     private Double stock;
 
     @JoinColumn(referencedColumnName = "id")

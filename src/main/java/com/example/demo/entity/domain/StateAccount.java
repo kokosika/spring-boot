@@ -6,7 +6,6 @@
 package com.example.demo.entity.domain;
 
 import com.example.demo.entity.common.Account;
-import com.example.demo.entity.common.Product;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -34,9 +33,9 @@ public class StateAccount extends BaseDomainEntity {
     public void setAccounts(Set<Account> accounts) {
         this.accounts = accounts;
     }
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "stateAccount")
     @JsonIgnore
     private Set<Account> accounts;
-    
+
 }

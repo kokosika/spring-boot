@@ -5,7 +5,7 @@
  */
 package com.example.demo.entity.domain;
 
-import com.example.demo.entity.common.Product;
+import com.example.demo.entity.common.BuyProduct;
 import com.example.demo.framework.entity.BaseDomainEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -19,5 +19,7 @@ import java.util.Set;
  */
 @Entity
 public class PaymentMethod extends BaseDomainEntity {
-
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "paymentMethod")
+    @JsonIgnore
+    private Set<BuyProduct> buyProducts;
 }
