@@ -34,3 +34,7 @@ INSERT INTO category(create_state, state, description, name) VALUES (NOW(),NOW()
 INSERT INTO category(create_state, state, description, name) VALUES (NOW(),NOW(),'CONGELADOS VARIOS','CONGELADOS');
 INSERT INTO category(create_state, state, description, name) VALUES (NOW(),NOW(),'CARNES CONGELADAS','CARNES');
 INSERT INTO category(create_state, state, description, name) VALUES (NOW(),NOW(),'CARNES AL NATURAL','CARNICERIA');
+
+INSERT INTO type_document(create_state, state, description, name) VALUES (NOW(),NOW(),'COMPRAS O VENTAS DE TIPO BOLETA','BOLETA');
+INSERT INTO type_document(create_state, state, description, name) VALUES (NOW(),NOW(),'COMPRAS O VENTAS DE TIPO FACTURA','FACTURA');
+INSERT INTO type_document(create_state, state, description, name) VALUES (NOW(),NOW(),'EVITAR ESTE TIPO DE PAGO','OTROS');
