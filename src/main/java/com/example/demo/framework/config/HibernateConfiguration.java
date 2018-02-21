@@ -13,7 +13,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean;
  * @author fecalderon
  */
 @Configuration
-public class HibernateConfig {
+public class HibernateConfiguration {
     @Bean
     public HibernateJpaSessionFactoryBean sessionFactory() {
         return new HibernateJpaSessionFactoryBean();
