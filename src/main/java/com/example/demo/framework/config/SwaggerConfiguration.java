@@ -34,11 +34,12 @@ public class SwaggerConfiguration {
     }
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "REST API",
-                "REST API de ejemplo para código 200.",
+                "Api rest para control de inventario y ventas",
+                "Esta rest api esta considerada para la ejecucion de un negocio de venta y control de inventario,"
+                        + "para administrar todas las carateristicas de su negocio.",
                 "v1.0",
-                "Todos los derechos otorgados",
-                new Contact("Yoandy Pérez Villazón", "https://codigo200.wordpress.com", "codigo200@domain.com"),
-                "Licencia del API", "http://www.fsf.org", Collections.emptyList());
+                "Todos los derechos reservados",
+                new Contact("Franco cortez nuñez", "www.atlasframework.com", "kokosika3@gmail.com"),
+                "Licencia exclusiva para el uso del inventario", "springboot.com", Collections.emptyList());
     }
 }
